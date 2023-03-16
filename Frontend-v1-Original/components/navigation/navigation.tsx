@@ -48,7 +48,6 @@ function Navigation() {
         {renderSubNav("Vote", "vote")}
         {renderSubNav("Rewards", "rewards")}
         {renderSubNav("Bribe", "bribe")}
-        {renderDocsTab()}
       </div>
     );
   };
