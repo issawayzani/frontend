@@ -19,18 +19,21 @@ function Home() {
           <Grid item lg={12} md={12} sm={12} xs={12}>
             <Typography
               variant="h1"
-              className="relative bottom-0 mb-5 animate-titleAnim font-['Monument'] text-lg font-thin uppercase tracking-wider text-cantoGreen delay-[0s]"
+              className="relative bottom-0 text-left mb-5 animate-titleAnim font-['Monument'] text-[28px] font-bold uppercase tracking-wider text-white delay-[0s]"
             >
-              Canto Liquidity Layer
+              honey <span className="text-beraPurple">talks!</span>
             </Typography>
           </Grid>
           <Grid item lg={12} md={12} sm={12} xs={12}>
             <Typography
-              variant="h1"
-              className="relative bottom-0 mb-6 animate-titleAnim text-center font-['Monument'] text-3xl delay-200 sm:text-4xl md:mb-8 md:text-6xl"
+              variant="body1"
+              className="relative bottom-0 mb-6 animate-titleAnim text-left font-['Monument'] text-sm delay-200 sm:text-md md:mb-4 md:text-sm w-[60em]"
             >
-              Low cost stable coin swaps
+              Beradrome is the liquidity and low-slippage trading hub on Berachain. Beradrome combines features from the top AMM models into one power house, taking ve(3,3) to a new level.
+              <br />
+              On Beradrome, protocols can build deep liquidity stat and increase the capital efficiency of their incentives by leveraging our built-in bribes, voting and farming mechanisms.
             </Typography>
+
           </Grid>
           <Grid item lg={12} md={12} sm={12} xs={12}>
             <Grid container spacing={2}>
