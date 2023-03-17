@@ -49,7 +49,7 @@ function Home() {
               </Grid>
               <Grid item lg={6} md={6} sm={12} xs={12}>
                 <Button
-                  className="relative bottom-0 min-w-full animate-titleAnim bg-[#06d3d71a] pl-3 pt-5 pr-[10px] pb-5 font-['Monument'] capitalize text-cantoGreen delay-[600ms] max-md:float-none max-md:m-0 max-md:w-full"
+                  className="relative bottom-0 min-w-full animate-titleAnim bg-[#06d3d71a] pl-3 pt-5 pr-[10px] pb-5 font-['Monument'] capitalize text-beraPurple delay-[600ms] max-md:float-none max-md:m-0 max-md:w-full"
                   onClick={() => router.push("/swap")}
                 >
                   Enter App
@@ -97,7 +97,7 @@ function Home() {
           </Grid>
           <Grid item lg={12} md={12} sm={12} xs={12}>
             <Button
-              className="min-w-full bg-[#06d3d71a] pl-3 pt-5 pr-[10px] pb-5 font-['Monument'] capitalize text-cantoGreen max-md:w-full"
+              className="min-w-full bg-[#06d3d71a] pl-3 pt-5 pr-[10px] pb-5 font-['Monument'] capitalize text-beraPurple max-md:w-full"
               onClick={() => router.push("/swap")}
             >
               Enter App
