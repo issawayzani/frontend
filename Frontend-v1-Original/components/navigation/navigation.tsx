@@ -46,10 +46,12 @@ function Navigation() {
         {renderSubNav(`Home`, "home")}
         {renderSubNav("Swap", "swap")}
         {renderSubNav("Liquidity", "liquidity")}
-        {renderSubNav("Farms", "vest")}
+        {renderSubNav("Farms", "farms")}
+        {renderSubNav("hiBERO", "hibero")}
+        {/* {renderSubNav("Vest", "vest")}
         {renderSubNav("Vote", "vote")}
         {renderSubNav("Rewards", "rewards")}
-        {renderSubNav("Bribe", "bribe")}
+        {renderSubNav("Bribe", "bribe")} */}
       </div>
     );
   };
