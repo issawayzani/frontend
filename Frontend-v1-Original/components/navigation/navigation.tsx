@@ -9,7 +9,7 @@ import classes from "./navigation.module.css";
 
 function Navigation() {
   const router = useRouter();
-  const [active, setActive] = useState("swap");
+  const [active, setActive] = useState("home");
 
   useEffect(() => {
     const activePath = router.asPath;
@@ -42,6 +42,7 @@ function Navigation() {
   const renderNavs = () => {
     return (
       <div className={classes.navToggles}>
+        {renderSubNav("Home", "home")}
         {renderSubNav("Swap", "swap")}
         {renderSubNav("Liquidity", "liquidity")}
         {renderSubNav("Vest", "vest")}
