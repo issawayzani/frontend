@@ -6,10 +6,11 @@ import { Typography } from "@mui/material";
 import { withTheme } from "@mui/styles";
 
 import classes from "./navigation.module.css";
+import Image from 'next/image';
 
 function Navigation() {
   const router = useRouter();
-  const [active, setActive] = useState("swap");
+  const [active, setActive] = useState("home");
 
   useEffect(() => {
     const activePath = router.asPath;
@@ -42,9 +43,10 @@ function Navigation() {
   const renderNavs = () => {
     return (
       <div className={classes.navToggles}>
+        {renderSubNav(`Home`, "home")}
         {renderSubNav("Swap", "swap")}
         {renderSubNav("Liquidity", "liquidity")}
-        {renderSubNav("Vest", "vest")}
+        {renderSubNav("Farms", "vest")}
         {renderSubNav("Vote", "vote")}
         {renderSubNav("Rewards", "rewards")}
         {renderSubNav("Bribe", "bribe")}
@@ -63,6 +65,7 @@ function Navigation() {
           }
         >
           <Typography variant="h2" className={classes.subtitleText}>
+            <Image src={`/images/menu_${title}_icon.svg`} width={20} height={20}/>
             {title}
           </Typography>
         </a>

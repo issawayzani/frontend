@@ -29,7 +29,7 @@ module.exports = {
         titleAnim: "titleAnim 1s ease 1 forwards",
       },
       colors: {
-        cantoGreen: "#06fc99",
+        beraPurple: "#9757FF",
       },
     },
   },

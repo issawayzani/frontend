@@ -6,7 +6,7 @@
   border-radius: 12px;
   border: 0 !important;
   padding: 10px;
-  box-shadow: 0 0 0.2em rgba(14, 233, 222, 0.993);
+  box-shadow: 0 0 0.2em rgba(255, 0, 0, 0.5);
 }
 
 a.linkz {
@@ -335,7 +335,7 @@ a.linkz {
 
 .testChange {
   box-shadow: 0 0 0.2em rgba(30, 131, 126, 0.993);
-  background-color: rgba(0, 0, 0, 0) !important;
+  background-color: #4639BF !important;
   color: #fff !important;
 }
 
