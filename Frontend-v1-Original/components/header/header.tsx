@@ -29,7 +29,6 @@ import { ACTIONS } from "../../stores/constants/constants";
 
 import stores from "../../stores";
 import { formatAddress } from "../../utils/utils";
-import bera_logo from '../../images/bera_logo.svg'
 
 import classes from "./header.module.css";
 
@@ -42,7 +41,7 @@ function SiteLogo({ className }) {
   return (
     <Image
       className={className}
-      src={bera_logo}
+      src="/images/bera_logo.svg"
       alt="beradrome logo"
       height={50}
       width={260}
