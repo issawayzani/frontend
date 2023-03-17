@@ -35,8 +35,8 @@ export default function Layout({
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <div className={classes.background} />
-      <div className={classes.greyGlow} />
-      <div className={classes.greenGlow} />
+      {/* <div className={classes.greyGlow} />
+      <div className={classes.greenGlow} /> */}
       <div className={classes.content}>
         {!configure && <Header />}
         <SnackbarController />
