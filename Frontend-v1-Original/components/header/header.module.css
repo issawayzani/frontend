@@ -23,7 +23,7 @@ html:not([data-scroll="0"]) .headerContainer {
   /* background-color: #fff; */
   opacity: 0.9;
   background-color: rgba(0, 0, 0, 0.973);
-  box-shadow: 0 0 0.2em rgba(14, 233, 222, 0.993);
+  /* box-shadow: 0 0 0.2em rgba(14, 233, 222, 0.993); */
   transition: 0.4s linear;
   backdrop-filter: blur(30px);
   -webkit-backdrop-filter: blur(30px);
@@ -54,8 +54,7 @@ html:not([data-scroll="0"]) .headerContainer {
   color: #06d3d7 !important;
 }
 
-.appLogo {
-}
+.appLogo {}
 
 .logoContainer {
   cursor: pointer;
@@ -198,9 +197,11 @@ html:not([data-scroll="0"]) .headerContainer {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
@@ -225,15 +226,19 @@ html:not([data-scroll="0"]) .headerContainer {
 .metamask {
   background-image: url("/connectors/icn-metamask.svg");
 }
+
 .ledger {
   background-image: url("/connectors/icn-ledger.svg");
 }
+
 .coinbase {
   background-image: url("/connectors/coinbaseWalletIcon.svg");
 }
+
 .torus {
   background-image: url("/connectors/torus.jpg");
 }
+
 .trust {
   background-image: url("/connectors/trustWallet.png");
 }
@@ -280,8 +285,7 @@ html:not([data-scroll="0"]) .headerContainer {
   z-index: 1100 !important;
 }
 
-.ErrorContent {
-}
+.ErrorContent {}
 
 .ErrorTxt {
   color: #fff;
@@ -332,8 +336,7 @@ html:not([data-scroll="0"]) .headerContainer {
   cursor: pointer;
 }
 
-.testnetDisclaimer {
-}
+.testnetDisclaimer {}
 
 .testnetDisclaimerText {
   font-size: 13px !important;

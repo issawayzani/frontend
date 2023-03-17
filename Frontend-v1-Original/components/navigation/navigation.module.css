@@ -2,11 +2,9 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  background: #040105;
   border-radius: 12px;
   border: 0 !important;
   padding: 10px;
-  box-shadow: 0 0 0.2em rgba(255, 0, 0, 0.5);
 }
 
 a.linkz {
@@ -57,12 +55,9 @@ a.linkz {
   width: 100%;
   border-radius: 10px;
   cursor: pointer;
-  background: radial-gradient(
-      circle,
+  background: radial-gradient(circle,
       rgba(63, 94, 251, 0.7) 0%,
-      rgba(47, 128, 237, 0.7) 48%
-    )
-    rgba(63, 94, 251, 0.7) 100%;
+      rgba(47, 128, 237, 0.7) 48%) rgba(63, 94, 251, 0.7) 100%;
 }
 
 .socials {
@@ -92,15 +87,19 @@ a.linkz {
 .telegram {
   background-image: url("/socials/telegram.svg");
 }
+
 .medium {
   background-image: url("/socials/medium.svg");
 }
+
 .twitter {
   background-image: url("/socials/twitter.svg");
 }
+
 .github {
   background-image: url("/socials/github.svg");
 }
+
 .discord {
   background-image: url("/socials/discord.svg");
 }
@@ -142,15 +141,19 @@ a.linkz {
 .metamask {
   background-image: url("/connectors/icn-metamask.svg");
 }
+
 .ledger {
   background-image: url("/connectors/icn-ledger.svg");
 }
+
 .coinbase {
   background-image: url("/connectors/coinbaseWalletIcon.svg");
 }
+
 .torus {
   background-image: url("/connectors/torus.jpg");
 }
+
 .trust {
   background-image: url("/connectors/trustWallet.png");
 }
@@ -179,8 +182,7 @@ a.linkz {
   cursor: pointer;
 }
 
-.subAssets {
-}
+.subAssets {}
 
 .navigationSubOptionContainer {
   display: flex;
@@ -193,8 +195,9 @@ a.linkz {
 }
 
 .subtitleText {
-  font-size: 14px !important;
+  font-size: 15px !important;
   margin: 0 !important;
+  padding-left: 10px;
 }
 
 .sectionDivider {
@@ -327,7 +330,9 @@ a.linkz {
   font-weight: 500;
   font-size: 0.875rem;
   line-height: 1.75;
-} /* Transparent border to eliminate position jittering from Active state */
+}
+
+/* Transparent border to eliminate position jittering from Active state */
 
 .navButton:hover {
   background-color: rgba(255, 255, 255, 0.04);
@@ -352,9 +357,11 @@ a.linkz {
     z-index: 10020;
     background: #040105;
   }
+
   .socials {
     display: none;
   }
+
   .navigationContent {
     /* display: none; */
     background: #040105;
@@ -366,6 +373,7 @@ a.linkz {
     padding: 15px 0;
     border-bottom: 1px solid rgba(126, 153, 176, 0.2);
   }
+
   .navigationContentMobile {
     position: fixed;
     top: 0px;
@@ -381,6 +389,7 @@ a.linkz {
     border-radius: 0 !important;
     text-align: center !important;
   }
+
   .menuIcon {
     position: absolute;
     top: 7px;
@@ -388,16 +397,19 @@ a.linkz {
     display: flex;
     transform: scale(0.8);
   }
+
   .navigationHeading {
     width: 100%;
     display: block;
   }
+
   .headerThings {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
+
   .backButtonContainer {
     position: absolute;
     top: 24px;
@@ -431,12 +443,9 @@ a.linkz {
     border-radius: 10px;
     text-align: center !important;
     cursor: pointer;
-    background: radial-gradient(
-        circle,
+    background: radial-gradient(circle,
         rgba(63, 94, 251, 0.7) 0%,
-        rgba(47, 128, 237, 0.7) 48%
-      )
-      rgba(63, 94, 251, 0.7) 100%;
+        rgba(47, 128, 237, 0.7) 48%) rgba(63, 94, 251, 0.7) 100%;
   }
 
   .sectionText {

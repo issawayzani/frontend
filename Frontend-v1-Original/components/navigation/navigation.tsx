@@ -66,8 +66,8 @@ function Navigation() {
               : classes.navButton
           }
         >
+          <Image src={`/images/menu_${title}_icon.svg`} width={20} height={20} />
           <Typography variant="h2" className={classes.subtitleText}>
-            <Image src={`/images/menu_${title}_icon.svg`} width={20} height={20}/>
             {title}
           </Typography>
         </a>
@@ -79,10 +79,10 @@ function Navigation() {
     return (
       <button
         className={classes.navButton}
-        onClick={() => window.open("https://docs.velocimeter.xyz/", "_blank")}
+        onClick={() => window.open("https://docs.beradrome.com/", "_blank")}
       >
         <Typography variant="h2" className={classes.subtitleText}>
-          Docs
+          Documentation
         </Typography>
       </button>
     );
