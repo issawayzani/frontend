@@ -13,7 +13,7 @@ export default function Layout({
   return (
     <div className={classes.container}>
       <Head>
-        <link rel="icon" href="/images/logo-icon.png" />
+        <link rel="icon" href="/images/logo_icon.svg" />
         <link
           rel="preload"
           href="/fonts/Inter/Inter-Regular.ttf"
@@ -28,9 +28,10 @@ export default function Layout({
         />
         <meta
           name="description"
-          content="Velocimeter allows low cost, near 0 slippage trades on uncorrelated or tightly correlated assets built on Arbitrum."
+          content="Beradrome is the liquidity and low-slippage trading hub on Berachain. 
+          Beradrome combines features from the top AMM models into one power house, taking ve(3,3) to a new level."
         />
-        <meta name="og:title" content="Velocimeter" />
+        <meta name="og:title" content="Berafrome" />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <div className={classes.background} />

@@ -37,15 +37,14 @@ type EthWindow = Window &
     ethereum?: any;
   };
 
-function SiteLogo(props) {
-  const { color, className } = props;
+function SiteLogo({ className }) {
   return (
     <Image
       className={className}
-      src="/images/vcm_logo.png"
-      alt="velocimeter logo"
-      height={38}
-      width={256}
+      src="/images/bera_logo.svg"
+      alt="beradrome logo"
+      height={50}
+      width={260}
     />
   );
 }
@@ -263,7 +262,7 @@ function Header() {
           className={classes.logoContainer}
         >
           <SiteLogo className={classes.appLogo} />
-          {/* <Typography className={classes.logoText}>Velocimeter</Typography> */}
+          {/* <Typography className={classes.logoText}>Beradrome</Typography> */}
         </a>
 
         <Navigation />
