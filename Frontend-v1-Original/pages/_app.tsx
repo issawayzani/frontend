@@ -83,7 +83,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <React.Fragment>
       <Head>
-        <title>Velocimeter</title>
+        <title>Beradrome</title>
         <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width"
