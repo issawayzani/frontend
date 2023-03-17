@@ -12,10 +12,13 @@
   max-width: 485px;
   width: 100%;
   padding: 24px;
+  border-radius: 8px;
+  border: 1px solid #4639BF; 
+  background-color: #181346;
   display: flex;
   flex-direction: column;
-  -webkit-box-shadow: 0 13px 30px 0 rgba(7, 9, 18, 0.1) !important;
-  box-shadow: 0 13px 30px 0 rgba(7, 9, 18, 0.1) !important;
+  -webkit-box-shadow: 0 13px 30px 0 #181346 !important; 
+   box-shadow: 0 13px 30px 0 #181346 !important; 
 }
 
 .smallerText {
@@ -47,7 +50,7 @@
   border-radius: 10px;
   width: 100%;
   align-items: center;
-  background: #272826;
+  background: #261F6C;
 }
 
 .error {
@@ -199,7 +202,7 @@
 .inputBalanceText {
   font-weight: 100 !important;
   font-size: 12px !important;
-  color: #7e99b0;
+  color: #ede9f5;
   margin-right: 6px !important;
   margin-top: 6px !important;
 }
@@ -350,14 +353,14 @@
 .swapIconContainer {
   width: 100%;
   display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
   align-items: center;
   justify-content: center;
-  z-index: 1;
-  height: 0px;
 }
 
 .swapIconSubContainer {
-  background: #161b2c;
+  background: #2c2416;
   border-radius: 9px;
   height: 38px;
   z-index: 1;
@@ -557,13 +560,13 @@
 }
 
 .buttonOverride {
-  background: #272826 !important;
-  color: rgb(6, 211, 215) !important;
+  background: #9757FF !important;
+  color: rgb(242, 248, 248) !important;
   font-weight: 700 !important;
 }
 
 .buttonOverride:hover {
-  background: rgb(19, 44, 60) !important;
+  background: #9757FF !important;
 }
 
 .route {
