@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import { Typography, Button, Grid } from "@mui/material";
+import Image from "next/image";
 
 import { useScrollTo } from "react-use-window-scroll";
 
@@ -24,7 +25,7 @@ function Home() {
               honey <span className="text-beraPurple">talks!</span>
             </Typography>
           </Grid>
-          <Grid item lg={12} md={12} sm={12} xs={12}>
+          <Grid item lg={12} md={12} sm={12} xs={12} className="flex">
             <Typography
               variant="body1"
               className="relative bottom-0 mb-6 animate-titleAnim text-left font-['Monument'] text-sm delay-200 sm:text-md md:mb-4 md:text-sm w-[60em]"
@@ -33,9 +34,9 @@ function Home() {
               <br />
               On Beradrome, protocols can build deep liquidity stat and increase the capital efficiency of their incentives by leveraging our built-in bribes, voting and farming mechanisms.
             </Typography>
-
+            <Image src='/images/bear-riding-cycle.svg' width={200} height={200} />
           </Grid>
-          <Grid item lg={12} md={12} sm={12} xs={12}>
+          <Grid item lg={6} md={6} sm={12} xs={12}>
             <Grid container spacing={2}>
               <Grid item lg={6} md={6} sm={12} xs={12}>
                 <Button
@@ -60,7 +61,6 @@ function Home() {
         </Grid>
       </div>
       <div id="info" className="relative h-screen w-full">
-        <div className="hidden md:absolute md:top-[5%] md:left-1/2 md:z-[1] md:block md:h-[600px] md:w-[600px] md:-translate-x-1/2 md:-translate-y-1/2 md:bg-homePage md:bg-cover md:bg-no-repeat md:opacity-50 md:mix-blend-lighten"></div>
         <Grid
           container
           spacing={3}
