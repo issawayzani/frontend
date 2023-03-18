@@ -14,9 +14,10 @@ const styles = {
   mainGridTitle: "relative bottom-0 text-left mb-5 animate-titleAnim font-montserrat font-black text-5xl uppercase tracking-wider text-white delay-[0s] xs:text-[20px]",
   mainGridText: "relative bottom-0 mb-6 animate-titleAnim text-left font-montserrat font-medium text-lg delay-200 sm:text-md md:mb-10 md:text-[20px] w-[42em]",
   buttons: "relative bottom-0 min-w-[70px] animate-titleAnim font-montserrat font-bold text-md capitalize text-white delay-[400ms] max-md:float-none max-md:m-0 max-md:w-full rounded-[5px]",
-  miniSection: "absolute w-full bottom-[120px] right-[20px] px-[80px] xs:px-[100px] lg:px-[100px]",
-  socialMediaGrid: "flex justify-center gap-2",
-  socialMediaIcon: "flex flex-wrap px-1 cursor-pointer"
+  miniSection: "absolute w-full bottom-[120px] xs:px-[100px] lg:px-[100px] border border-white ",
+  socialMediaGrid: "flex justify-center gap-2 bg-green-400",
+  socialMediaIcon: "flex px-1 cursor-pointer",
+  scrollbutton: "border border-red-600 flex justify-center",
 }
 
 
@@ -94,32 +95,37 @@ function Home() {
         {/* End of Main Container Grid */}
 
         <div className={styles.miniSection}>
-          {/* Social media section */}
-          <Grid container spacing={1}>
-            <Grid item lg={4} className={styles.socialMediaGrid} >
-              <Link href="https://discord.com/invite/beradrome" target="_blank">
-                <Image src='/images/socialMedia/discord.svg' alt='social-media' width={50} height={50} className={styles.socialMediaIcon} />
-              </Link>
-              <Link href="https://twitter.com/beradrome" target="_blank">
-                <Image src='/images/socialMedia/twitter.svg' alt='social-media' width={50} height={50} className={styles.socialMediaIcon} />
-              </Link>
-              <Link href="https://github.com/BeraLabs" target="_blank">
-                <Image src='/images/socialMedia/github.svg' alt='social-media' width={50} height={50} className={styles.socialMediaIcon} />
-              </Link>
-              <Link href="https://discord.com/invite/beradrome" target="_blank">
-                <Image src='/images/socialMedia/medium.svg' alt='social-media' width={50} height={50} className={styles.socialMediaIcon} />
-              </Link>
-              <Link href="https://discord.com/invite/beradrome" target="_blank">
-                <Image src='/images/socialMedia/youtube.svg' alt='social-media' width={50} height={50} className={styles.socialMediaIcon} />
-              </Link>
-              <Link href="https://discord.com/invite/beradrome" target="_blank">
-                <Image src='/images/socialMedia/telegram.svg' alt='social-media' width={50} height={50} className={styles.socialMediaIcon} />
-              </Link>
+          <Grid container>
+            {/* Social media section */}
+            <Grid item lg={4} md={12} sm={12} xs={12} className={styles.socialMediaGrid} >
+              <div>
+                <Link href="https://discord.com/invite/beradrome" target="_blank">
+                  <Image src='/images/socialMedia/discord.svg' alt='social-media' width={50} height={50} className={styles.socialMediaIcon} />
+                </Link>
+                <Link href="https://twitter.com/beradrome" target="_blank">
+                  <Image src='/images/socialMedia/twitter.svg' alt='social-media' width={50} height={50} className={styles.socialMediaIcon} />
+                </Link>
+                <Link href="https://github.com/BeraLabs" target="_blank">
+                  <Image src='/images/socialMedia/github.svg' alt='social-media' width={50} height={50} className={styles.socialMediaIcon} />
+                </Link>
+                <Link href="https://discord.com/invite/beradrome" target="_blank">
+                  <Image src='/images/socialMedia/medium.svg' alt='social-media' width={50} height={50} className={styles.socialMediaIcon} />
+                </Link>
+                <Link href="https://discord.com/invite/beradrome" target="_blank">
+                  <Image src='/images/socialMedia/youtube.svg' alt='social-media' width={50} height={50} className={styles.socialMediaIcon} />
+                </Link>
+                <Link href="https://discord.com/invite/beradrome" target="_blank">
+                  <Image src='/images/socialMedia/telegram.svg' alt='social-media' width={50} height={50} className={styles.socialMediaIcon} />
+                </Link>
+              </div>
             </Grid>
+            {/* End Social media */}
 
             {/* Tap to scroll button */}
-            <Grid item lg={4}>
-
+            <Grid item lg={4} md={12} sm={12} xs={12} className={styles.scrollbutton}>
+              <div className="py-auto my-auto">
+                hello
+              </div>
             </Grid>
             {/* End Tap to scroll button */}
 
@@ -127,7 +133,6 @@ function Home() {
 
             </Grid>
           </Grid>
-          {/* End Social media */}
         </div>
       </div>
       {/* End Home Section */}
