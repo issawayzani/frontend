@@ -3,12 +3,14 @@ import {
   TextField,
   Typography,
   InputAdornment,
+  Box,
   Button,
   MenuItem,
   IconButton,
   Dialog,
   CircularProgress,
 } from "@mui/material";
+import Image from 'next/image';
 import {
   Search,
   ArrowDownward,
@@ -629,9 +631,14 @@ function Setup() {
       </div>
     );
   };
-
+    // container inside swapcontainer 
   return (
     <div className={classes.swapInputs}>
+       <Box mb="20px">
+       <Image src={`/images/menu_Swap_icon.svg`} width={35} height={35}/>
+          Swap 
+       </Box>
+
       {renderMassiveInput(
         "From",
         fromAmountValue,
@@ -644,11 +651,12 @@ function Setup() {
         fromAssetOptions,
         onAssetSelect
       )}
+       <Box>
       <div className={classes.swapIconContainer}>
-        <div className={classes.swapIconSubContainer}>
-          <ArrowDownward className={classes.swapIcon} onClick={swapAssets} />
-        </div>
+        <Image src={`/images/swap.svg`} className={classes.swapIcon} width={20} height={20} onClick={swapAssets} />
+        
       </div>
+      </Box>
       {renderMassiveInput(
         "To",
         toAmountValue,
@@ -881,7 +889,7 @@ function AssetSelect({ type, value, assetOptions, onSelect }) {
       </>
     );
   };
-
+    // token select 
   const renderOptions = () => {
     return (
       <>
