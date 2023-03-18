@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   important: true,
   future: {
@@ -31,6 +32,9 @@ module.exports = {
       colors: {
         beraPurple: "#9757FF",
       },
+      fontFamily: {
+        'montserrat': ['Montserrat']
+      }
     },
   },
   plugins: [],
