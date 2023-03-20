@@ -12,8 +12,8 @@ const styles = {
   wrapper: "relative flex h-full w-screen flex-col pt-20",
   section: "relative w-full border",
   fullScreen: "h-screen",
-  mainGrid: "absolute top-1/3 left-1/2 z-[2] h-auto max-w-[80vw] -translate-x-1/2 -translate-y-1/2 text-left md:max-w-[80vw] flex lg:flex-row-reverse md:flex-row-reverse sm:flex-col xs:flex-col justify-center border border-red-600 p-5",
-  mainGridReverse: "absolute top-1/3 left-1/2 z-[2] h-auto max-w-[80vw] -translate-x-1/2 -translate-y-1/2 text-left md:max-w-[80vw] flex lg:flex-row md:flex-row sm:flex-col xs:flex-col justify-center",
+  mainGrid: "absolute top-1/2 left-1/2 z-[2] h-auto max-w-[80vw] -translate-x-1/2 -translate-y-1/2 text-left md:max-w-[80vw] flex lg:flex-row-reverse md:flex-row-reverse sm:flex-col xs:flex-col justify-center border border-red-600 p-5",
+  mainGridReverse: "absolute top-1/2 left-1/2 z-[2] h-auto max-w-[80vw] -translate-x-1/2 -translate-y-1/2 text-left md:max-w-[80vw] flex lg:flex-row md:flex-row sm:flex-col xs:flex-col justify-center",
   mainImage: "flex justify-center",
   mainGridTitle: "relative bottom-0 text-left mb-5 animate-titleAnim font-montserrat font-black lg:text-5xl uppercase tracking-wider text-white delay-[0s] md:text-4xl sm:text-[10px] xs:text-[20px]",
   mainGridText: "relative bottom-0 mb-6 animate-titleAnim text-left font-montserrat font-medium text-lg delay-200 sm:text-md md:mb-10 md:text-[20px] w-[42em] text-white ",
@@ -335,7 +335,7 @@ function Home() {
         >
           {/* Image Grid */}
           <Grid item lg={4} md={6} sm={12} xs={12}>
-            <Image src='/images/bridge_info.svg' width={350} height={338} className={styles.mainImage} />
+            <Image src='/images/bridge_info.svg' width={600} height={500} className={styles.mainImage} />
           </Grid>
 
           {/* Main Text Grid */}
