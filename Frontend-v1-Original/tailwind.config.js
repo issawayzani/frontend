@@ -11,9 +11,6 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        homePage: 'url("/images/s.png")',
-      },
       keyframes: {
         titleAnim: {
           "0%": {
@@ -31,6 +28,7 @@ module.exports = {
       },
       colors: {
         beraPurple: "#9757FF",
+        beraBlue: "#4639BF"
       },
       fontFamily: {
         'montserrat': ['Montserrat']
