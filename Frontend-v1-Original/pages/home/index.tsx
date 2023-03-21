@@ -4,16 +4,19 @@ import Link from "next/link";
 import { Typography, Button, Grid } from "@mui/material";
 import EastOutlinedIcon from '@mui/icons-material/EastOutlined';
 import ArrowDownwardOutlinedIcon from '@mui/icons-material/ArrowDownwardOutlined';
+import HelpOutlineOutlinedIcon from '@mui/icons-material/HelpOutlineOutlined';
 
 
 import { useScrollTo } from "react-use-window-scroll";
 
 const styles = {
   wrapper: "relative flex h-full w-screen flex-col pt-20",
-  section: "relative w-full border",
+  section: "relative w-full",
   fullScreen: "h-screen",
-  mainGrid: "absolute top-1/2 left-1/2 z-[2] h-auto max-w-[80vw] -translate-x-1/2 -translate-y-1/2 text-left md:max-w-[80vw] flex lg:flex-row-reverse md:flex-row-reverse sm:flex-col xs:flex-col justify-center border border-red-600 p-5",
-  mainGridReverse: "absolute top-1/2 left-1/2 z-[2] h-auto max-w-[80vw] -translate-x-1/2 -translate-y-1/2 text-left md:max-w-[80vw] flex lg:flex-row md:flex-row sm:flex-col xs:flex-col justify-center",
+  mainGrid: "absolute top-1/2 left-1/2 z-[2] h-auto max-w-[80vw] -translate-x-1/2 -translate-y-1/2 text-left md:max-w-[80vw] flex lg:flex-row-reverse md:flex-row-reverse sm:flex-col xs:flex-col justify-center p-5",
+  mainGridReverse: "absolute top-1/2 left-1/2 z-[2] h-auto max-w-[80vw] -translate-x-1/2 -translate-y-1/2 text-left md:max-w-[80vw] flex lg:flex-row md:flex-row-reverse sm:flex-col xs:flex-col justify-center p-5",
+  mainDesctiption: "flex justify-center",
+  mainImageGrid: "flex justify-center",
   mainImage: "flex justify-center",
   mainGridTitle: "relative bottom-0 text-left mb-5 animate-titleAnim font-montserrat font-black lg:text-5xl uppercase tracking-wider text-white delay-[0s] md:text-4xl sm:text-[10px] xs:text-[20px]",
   mainGridText: "relative bottom-0 mb-6 animate-titleAnim text-left font-montserrat font-medium text-lg delay-200 sm:text-md md:mb-10 md:text-[20px] w-[42em] text-white ",
@@ -33,7 +36,10 @@ const styles = {
   statisticsGrid: "bg-[#181346] h-full rounded-l-[10px] rounded-r-[10px] flex flex-row justify-around",
   statisticsGridItem: "text-center p-5",
   statisticsGridItemNumber: "font-montserrat font-bold",
-  statisticsGridItemName: "text-beraPurple"
+  statisticsGridItemName: "text-beraPurple",
+  footer: "relative bg-[#181346] w-full h-[200px]",
+  footerSection: "flex flex-col gap-2 absolute top-[60px] left-[230px] leading-6",
+  external: "flex flex-col justify-start relative",
 }
 
 
@@ -54,8 +60,8 @@ function Home() {
           </Grid>
 
           {/* Main Text Grid */}
-          <Grid item lg={8} md={12} sm={12} xs={12}>
-            <Grid container spacing={2}>
+          <Grid item lg={8} md={12} sm={12} xs={12} >
+            <Grid container spacing={2} >
               <Grid item lg={12} md={12} sm={12} xs={12}>
                 <Typography
                   variant="h1"
@@ -198,7 +204,7 @@ function Home() {
       {/* End Statistics */}
 
       {/* Swap Info */}
-      <div className={`${styles.section} h-[600px]`}>
+      <div className={`${styles.section} h-[700px]`}>
         {/* Main Container Grid */}
         <Grid
           container
@@ -206,13 +212,13 @@ function Home() {
           className={styles.mainGrid}
         >
           {/* Image Grid */}
-          <Grid item lg={4} md={6} sm={12} xs={12}>
-            <Image src='/images/swap_info.svg' width={350} height={338} className={styles.mainImage} />
+          <Grid item lg={4} md={6} sm={12} xs={12} className={styles.mainImageGrid}>
+            <Image src='/images/swap_info.svg' width={600} height={500} className={styles.mainImage} />
           </Grid>
 
           {/* Main Text Grid */}
-          <Grid item lg={8} md={12} sm={12} xs={12}>
-            <Grid container spacing={2}>
+          <Grid item lg={8} md={12} sm={12} xs={12} >
+            <Grid container spacing={2} >
               <Grid item lg={12} md={12} sm={12} xs={12}>
                 <Typography
                   variant="h1"
@@ -270,13 +276,13 @@ function Home() {
           className={styles.mainGridReverse}
         >
           {/* Image Grid */}
-          <Grid item lg={4} md={6} sm={12} xs={12}>
-            <Image src='/images/farm_info.svg' width={350} height={338} className={styles.mainImage} />
+          <Grid item lg={4} md={6} sm={12} xs={12} className={styles.mainImageGrid}>
+            <Image src='/images/farm_info.svg' width={600} height={500} className={styles.mainImage} />
           </Grid>
 
           {/* Main Text Grid */}
-          <Grid item lg={8} md={12} sm={12} xs={12}>
-            <Grid container spacing={2}>
+          <Grid item lg={8} md={12} sm={12} xs={12} >
+            <Grid container spacing={2} >
               <Grid item lg={12} md={12} sm={12} xs={12}>
                 <Typography
                   variant="h1"
@@ -334,13 +340,13 @@ function Home() {
           className={styles.mainGrid}
         >
           {/* Image Grid */}
-          <Grid item lg={4} md={6} sm={12} xs={12}>
+          <Grid item lg={4} md={6} sm={12} xs={12} className={styles.mainImageGrid}>
             <Image src='/images/bridge_info.svg' width={600} height={500} className={styles.mainImage} />
           </Grid>
 
           {/* Main Text Grid */}
-          <Grid item lg={8} md={12} sm={12} xs={12}>
-            <Grid container spacing={2}>
+          <Grid item lg={8} md={12} sm={12} xs={12} >
+            <Grid container spacing={2} >
               <Grid item lg={12} md={12} sm={12} xs={12}>
                 <Typography
                   variant="h1"
@@ -398,13 +404,13 @@ function Home() {
           className={styles.mainGridReverse}
         >
           {/* Image Grid */}
-          <Grid item lg={4} md={6} sm={12} xs={12}>
-            <Image src='/images/lend_borrow_info.svg' width={350} height={338} className={styles.mainImage} />
+          <Grid item lg={4} md={6} sm={12} xs={12} className={styles.mainImageGrid}>
+            <Image src='/images/lend_borrow_info.svg' width={600} height={500} className={styles.mainImage} />
           </Grid>
 
           {/* Main Text Grid */}
-          <Grid item lg={8} md={12} sm={12} xs={12}>
-            <Grid container spacing={2}>
+          <Grid item lg={8} md={12} sm={12} xs={12} >
+            <Grid container spacing={2} >
               <Grid item lg={12} md={12} sm={12} xs={12}>
                 <Typography
                   variant="h1"
@@ -453,46 +459,129 @@ function Home() {
       </div>
       {/* End Lend and Borrow Info */}
 
-      <div className={`${styles.section} flex justify-center my-5`}>
-        <Button className={`${styles.buttons} bg-beraBlue justify-center`}>
-          Show More
-        </Button>
+      <div className={`${styles.section} h-[200px] flex justify-center`}>
+        <div>
+          <Button className={`${styles.buttons} bg-beraBlue justify-center`}>
+            Show More
+          </Button>
+        </div>
       </div>
 
       {/* Footer */}
-      <div className={`relative bg-[#181346] w-full h-[200px]`}>
-
-        <div className={`${styles.miniSection} relative top-0 mt-2`}>
-          <Grid container className={styles.miniSectionContainer}>
-            {/* Social media section */}
-            <Grid item lg={4} md={12} sm={12} xs={12} className={styles.socialMediaGrid} >
-              <div>
-                <Link href="https://discord.com/invite/beradrome" target="_blank">
-                  <Image src='/socials/discord.svg' alt='social-media' width={40} height={40} className={styles.socialMediaIcon} />
-                </Link>
-                <Link href="https://twitter.com/beradrome" target="_blank">
-                  <Image src='/socials/twitter.svg' alt='social-media' width={40} height={40} className={styles.socialMediaIcon} />
-                </Link>
-                <Link href="https://github.com/BeraLabs" target="_blank">
-                  <Image src='/socials/github.svg' alt='social-media' width={40} height={40} className={styles.socialMediaIcon} />
-                </Link>
-                <Link href="https://discord.com/invite/beradrome" target="_blank">
-                  <Image src='/socials/medium.svg' alt='social-media' width={40} height={40} className={styles.socialMediaIcon} />
-                </Link>
-                <Link href="https://discord.com/invite/beradrome" target="_blank">
-                  <Image src='/socials/youtube.svg' alt='social-media' width={40} height={40} className={styles.socialMediaIcon} />
-                </Link>
-                <Link href="https://discord.com/invite/beradrome" target="_blank">
-                  <Image src='/socials/telegram.svg' alt='social-media' width={40} height={40} className={styles.socialMediaIcon} />
-                </Link>
-              </div>
+      <div className={styles.footer}>
+        <div>
+          {/* mini Section */}
+          <div className={`${styles.miniSection} absolute top-0 mt-2`}>
+            <Grid container className={styles.miniSectionContainer}>
+              {/* Social media section */}
+              <Grid item lg={4} md={12} sm={12} xs={12} className={styles.socialMediaGrid} >
+                <div>
+                  <a href="https://discord.com/invite/beradrome" target="_blank">
+                    <Image src='/socials/discord.svg' alt='social-media' width={40} height={40} className={styles.socialMediaIcon} />
+                  </a>
+                  <a href="https://twitter.com/beradrome" target="_blank">
+                    <Image src='/socials/twitter.svg' alt='social-media' width={40} height={40} className={styles.socialMediaIcon} />
+                  </a>
+                  <a href="https://github.com/BeraLabs" target="_blank">
+                    <Image src='/socials/github.svg' alt='social-media' width={40} height={40} className={styles.socialMediaIcon} />
+                  </a>
+                  <a href="https://discord.com/invite/beradrome" target="_blank">
+                    <Image src='/socials/medium.svg' alt='social-media' width={40} height={40} className={styles.socialMediaIcon} />
+                  </a>
+                  <a href="https://discord.com/invite/beradrome" target="_blank">
+                    <Image src='/socials/youtube.svg' alt='social-media' width={40} height={40} className={styles.socialMediaIcon} />
+                  </a>
+                  <a href="https://discord.com/invite/beradrome" target="_blank">
+                    <Image src='/socials/telegram.svg' alt='social-media' width={40} height={40} className={styles.socialMediaIcon} />
+                  </a>
+                </div>
+              </Grid>
+              {/* End Social media */}
             </Grid>
-            {/* End Social media */}
-          </Grid>
+          </div>
+          {/* End mini Section */}
+
+          <div className={styles.footerSection}>
+            <div className={styles.external}>
+              <a href={'#'} className="hover:text-beraPurple">About us</a>
+              <a href={'#'} className="hover:text-beraPurple">Analytics</a>
+              <a href={'#'} className="hover:text-beraPurple">Docs</a>
+            </div>
+          </div>
+
+          <div className="absolute right-[200px] top-0 mt-2">
+            <div>
+              <div className="mx-[50px] w-full container">
+                <div className="grid grid-cols-2 gap-8 px-6 md:grid-cols-4">
+                  <div>
+                    <h2 className="mb-4 text-md font-bold text-beraPurple uppercase">DEX</h2>
+                    <ul className="text-white">
+                      <li className="mb-4">
+                        <a href="#" className=" hover:underline">DeFi LIama</a>
+                      </li>
+                      <li className="mb-4">
+                        <a href="#" className="hover:underline">CoinGecko</a>
+                      </li>
+                      <li className="mb-4">
+                        <a href="#" className="hover:underline">CoinMarketCap</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h2 className="mb-4 text-md font-bold text-beraPurple uppercase">BERO Token</h2>
+                    <ul className="text-white">
+                      <li className="mb-4">
+                        <a href="#" className="hover:underline">CoinGecko</a>
+                      </li>
+                      <li className="mb-4">
+                        <a href="#" className="hover:underline">CoinMarketCap</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h2 className="mb-4 text-md font-bold text-beraPurple uppercase">Exchanges</h2>
+                    <ul className="text-white">
+                      <li className="mb-4">
+                        <a href="#" className="hover:underline">Felix</a>
+                      </li>
+                      <li className="mb-4">
+                        <a href="#" className="hover:underline">Gate.io</a>
+                      </li>
+                      <li className="mb-4">
+                        <a href="#" className="hover:underline">MEXC</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h2 className="mb-8 text-md font-bold text-beraPurple uppercase"></h2>
+                    <ul className="text-white">
+                      <li className="mb-4">
+                        <a href="#" className="hover:underline">HotBit</a>
+                      </li>
+                      <li className="mb-4">
+                        <a href="#" className="hover:underline">Poloniex</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div >
+
+        <div className="absolute bottom-0 left-[230px] py-3">
+          <div className="flex flex-row">
+            <div className="flex flex-row gap-2 justify-center">
+              <HelpOutlineOutlinedIcon className="w-5" />
+              <p>2022 Beradrome</p>
+            </div>
+            <div className="relative w-[1000px] bg-beraPurple h-1 m-3"></div>
+          </div>
         </div>
-      </div>
+      </div >
       {/* End Footer */}
-    </div>
+
+    </div >
   );
 }
 
