@@ -23,6 +23,12 @@ function Navigation() {
     if (activePath.includes("liquidity")) {
       setActive("liquidity");
     }
+    if (activePath.includes("farms")) {
+      setActive("farms");
+    }
+    if (activePath.includes("hiBERO")) {
+      setActive("hiBERO");
+    }
     if (activePath.includes("vest")) {
       setActive("vest");
     }
@@ -48,10 +54,10 @@ function Navigation() {
         {renderSubNav("Liquidity", "liquidity")}
         {renderSubNav("Farms", "farms")}
         {renderSubNav("hiBERO", "hibero")}
-        {/* {renderSubNav("Vest", "vest")}
+        {renderSubNav("Vest", "vest")}
         {renderSubNav("Vote", "vote")}
-        {renderSubNav("Rewards", "rewards")}
-        {renderSubNav("Bribe", "bribe")} */}
+        {/* {renderSubNav("Rewards", "rewards")} */}
+        {/* {renderSubNav("Bribe", "bribe")} */}
       </div>
     );
   };
