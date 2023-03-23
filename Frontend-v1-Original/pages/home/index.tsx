@@ -40,7 +40,7 @@ function Home() {
               </div>
 
               <div className="flex flex-row justify-start">
-                <Button className="bg-beraPurple rounded-[5px] m-3 text-white">
+                <Button className="bg-beraPurple rounded-[5px] m-3 text-white" onClick={() => router.push("/swap")}>
                   Connect Wallet
                   <EastOutlinedIcon className="ml-3" />
                 </Button>
