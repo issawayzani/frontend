@@ -1,6 +1,6 @@
 export const styles = {
-    wrapper: "relative flex w-screen h-[100%] flex-col",
-    section: "relative w-full top-[7em]",
+    wrapper: "relative flex w-full flex-col",
+    section: "relative w-full",
     fullScreen: "h-screen",
     mainGrid: "absolute top-1/3 left-1/2 z-[2] max-w-[80vw] -translate-x-1/2 -translate-y-1/2 text-left md:max-w-[80vw] flex lg:flex-row-reverse md:flex-row-reverse justify-center p-5",
     mainGridReverse: "absolute top-1/2 left-1/2 z-[2] max-w-[80vw] -translate-x-1/2 -translate-y-1/2 text-left md:max-w-[80vw] flex lg:flex-row md:flex-row-reverse sm:flex-col xs:flex-col justify-center p-5",
@@ -29,5 +29,4 @@ export const styles = {
     footer: "relative bg-[#181346] w-full h-[25vh]",
     footerSection: "flex flex-col gap-2 absolute top-[60px] left-[230px] leading-6",
     external: "flex flex-col justify-start relative",
-    responsive: "top-[32px] w-full"
 }

@@ -110,6 +110,7 @@ const coreTheme = createTheme({
       fontSize: "1rem",
       fontWeight: 300,
       lineHeight: 1.167,
+      color: 'white',
       ["@media (max-width:576px)"]: {
         // eslint-disable-line no-useless-computed-key
         fontSize: "0.8rem",
