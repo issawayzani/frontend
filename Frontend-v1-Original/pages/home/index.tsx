@@ -6,42 +6,9 @@ import EastOutlinedIcon from '@mui/icons-material/EastOutlined';
 import ArrowDownwardOutlinedIcon from '@mui/icons-material/ArrowDownwardOutlined';
 import HelpOutlineOutlinedIcon from '@mui/icons-material/HelpOutlineOutlined';
 
-
 import { useScrollTo } from "react-use-window-scroll";
 
-const styles = {
-  wrapper: "relative flex h-full w-screen flex-col pt-20 border",
-  section: "relative w-full border",
-  fullScreen: "h-screen",
-  mainGrid: "absolute top-1/3 left-1/2 z-[2] max-w-[80vw] -translate-x-1/2 -translate-y-1/2 text-left md:max-w-[80vw] flex lg:flex-row-reverse md:flex-row-reverse justify-center p-5 border border-red-600",
-  mainGridReverse: "absolute top-1/2 left-1/2 z-[2] max-w-[80vw] -translate-x-1/2 -translate-y-1/2 text-left md:max-w-[80vw] flex lg:flex-row md:flex-row-reverse sm:flex-col xs:flex-col justify-center p-5 border border-green-600",
-  mainDesctiption: "flex justify-center",
-  mainImageGrid: "flex justify-center",
-  mainImage: "flex justify-center border border-yellow-600",
-  mainGridTitle: "relative bottom-0 text-left mb-5 animate-titleAnim font-montserrat font-black lg:text-5xl uppercase tracking-wider text-white delay-[0s] md:text-4xl sm:text-[32px] xs:text-[20px]",
-  mainGridText: "relative bottom-0 mb-6 animate-titleAnim text-left font-montserrat font-medium text-lg delay-200 sm:text-md md:mb-10 md:text-[20px] w-[42em] text-white ",
-  heading: "text-white flex flex-row",
-  buttonsGrid: "flex flex-row border border-beraBlue p-5 rounded-[5px] justify-around lg:ml-3",
-  buttons: "relative bottom-0 min-w-[90px] animate-titleAnim font-montserrat font-bold text-md capitalize text-white delay-[400ms] max-md:float-none max-md:m-0 max-md:w-full rounded-[5px]",
-  miniSection: "relative w-full",
-  miniSectionContainer: "flex flex-row md:flex-row sm:flex-col xs:flex-col",
-  socialMediaGrid: "flex justify-center gap-2 pl-[50px]",
-  socialMediaIcon: "flex px-1 cursor-pointer",
-  scrollbuttonGrid: "flex justify-center",
-  scrollbutton: "py-auto my-auto bg-beraPurple p-4 w-[60px] h-[60px] rounded-[50%] flex justify-center",
-  arrowDown: "text-white text-[30px]",
-  statistics: "relative top-[32px] w-full h-[40vh] border border-orange-600",
-  text: "flex justify-end  animate-titleAnim font-montserrat font-medium delay-200 text-right p-5 lg:justify-end md:justify-center sm:justify-center xs:justify-center text-white",
-  underline: "underline underline-offset-[5px] decoration-beraPurple decoration-4",
-  statisticsGrid: "bg-[#181346] h-full rounded-l-[10px] rounded-r-[10px] flex flex-row justify-around",
-  statisticsGridItem: "text-center p-5",
-  statisticsGridItemNumber: "font-montserrat font-bold",
-  statisticsGridItemName: "text-beraPurple",
-  footer: "relative bg-[#181346] w-full h-[25vh] border border-blue-600",
-  footerSection: "flex flex-col gap-2 absolute top-[60px] left-[230px] leading-6",
-  external: "flex flex-col justify-start relative",
-  responsive: "relative top-[32px] w-full"
-}
+import { styles } from './styles'
 
 
 function Home() {
@@ -53,133 +20,130 @@ function Home() {
 
       {/* Home Section */}
       <div className={`${styles.section} ${styles.fullScreen} ${styles.responsive}`}>
-        <div>
 
-          {/* Main Container Grid */}
-          <Grid container spacing={2} className={styles.mainGrid}>
-            <div className="relative flex lg:flex-row-reverse md:flex-row-reverse sm:flex-col xs:flex-col">
+        {/* Main Container Grid */}
+        <Grid container spacing={2} className={styles.mainGrid}>
+          <div className="relative flex lg:flex-row-reverse md:flex-row-reverse sm:flex-col xs:flex-col">
 
-              {/* Image Grid */}
-              <Grid item lg={4} md={6} sm={12} xs={12} className={styles.mainImage}>
-                <Image src='/images/bear-riding-cycle.svg' width={300} height={338} />
-              </Grid>
+            {/* Image Grid */}
+            <Grid item lg={4} md={6} sm={12} xs={12} className={styles.mainImage}>
+              <Image src='/images/bear-riding-cycle.svg' width={300} height={338} />
+            </Grid>
 
-              {/* Main Text Grid */}
-              <Grid item lg={8} md={12} sm={12} xs={12} >
-                <Grid container spacing={2} >
+            {/* Main Text Grid */}
+            <Grid item lg={8} md={12} sm={12} xs={12} >
+              <Grid container spacing={2} >
 
-                  {/* Title grid */}
-                  <Grid item lg={12} md={12} sm={12} xs={12}>
-                    <Typography
-                      variant="h1"
-                      className={styles.mainGridTitle}
-                    >
-                      honey <span className="text-beraPurple">talks!</span>
-                    </Typography>
-                  </Grid>
-                  {/* title grid */}
+                {/* Title grid */}
+                <Grid item lg={10} md={12} sm={12} xs={12}>
+                  <Typography
+                    variant="h1"
+                    className={styles.mainGridTitle}
+                  >
+                    honey <span className="text-beraPurple">talks!</span>
+                  </Typography>
+                </Grid>
+                {/* title grid */}
 
-                  {/* body grid */}
-                  <Grid item lg={12} md={12} sm={12} xs={12} className="flex">
-                    <Typography
-                      variant="body1"
-                      className={styles.mainGridText}
-                    >
-                      Beradrome is the liquidity and low-slippage trading hub on Berachain. Beradrome combines features from the top AMM models into one power house, taking ve(3,3) to a new level.
-                      <br />
-                      On Beradrome, protocols can build deep liquidity stat and increase the capital efficiency of their incentives by leveraging our built-in bribes, voting and farming mechanisms.
-                    </Typography>
-                  </Grid>
-                  {/* body grid */}
+                {/* body grid */}
+                <Grid item lg={10} md={12} sm={12} xs={12} className="flex">
+                  <Typography
+                    variant="body1"
+                    className={styles.mainGridText}
+                  >
+                    Beradrome is the liquidity and low-slippage trading hub on Berachain. Beradrome combines features from the top AMM models into one power house, taking ve(3,3) to a new level.
+                    <br />
+                    On Beradrome, protocols can build deep liquidity stat and increase the capital efficiency of their incentives by leveraging our built-in bribes, voting and farming mechanisms.
+                  </Typography>
+                </Grid>
+                {/* body grid */}
 
-                  {/* Button Grid */}
-                  <Grid item lg={4} md={12} sm={12} xs={12}>
-                    <Grid container>
-                      <Grid item lg={7} md={8} sm={6} xs={6}>
-                        <Button
-                          className={`${styles.buttons} bg-beraPurple`}
-                          onClick={() => router.push("/swap")}
-                        >
-                          connect wallet
-                          <EastOutlinedIcon fontSize={"medium"} className="ml-2" />
-                        </Button>
-                      </Grid>
-                      <Grid item lg={5} md={8} sm={6} xs={6}>
-                        <Button
-                          className={`${styles.buttons} bg-beraBlue`}
-                          onClick={() =>
-                            scrollTo({ top: 1000, left: 0, behavior: "smooth" })
-                          }
-                        >
-                          learn more
-                        </Button>
-                      </Grid>
+                {/* Button Grid */}
+                <Grid item lg={4} md={12} sm={12} xs={12}>
+                  <Grid container>
+                    <Grid item lg={7} md={8} sm={6} xs={6}>
+                      <Button
+                        className={`${styles.buttons} bg-beraPurple`}
+                        onClick={() => router.push("/swap")}
+                      >
+                        connect wallet
+                        <EastOutlinedIcon fontSize={"medium"} className="ml-2" />
+                      </Button>
+                    </Grid>
+                    <Grid item lg={5} md={8} sm={6} xs={6}>
+                      <Button
+                        className={`${styles.buttons} bg-beraBlue`}
+                        onClick={() =>
+                          scrollTo({ top: 1000, left: 0, behavior: "smooth" })
+                        }
+                      >
+                        learn more
+                      </Button>
                     </Grid>
                   </Grid>
-                  {/* End of Buttons Grid */}
                 </Grid>
-              </Grid>
-              {/* End of Main Text Grid */}
-            </div>
-          </Grid>
-          {/* End of Main Container Grid */}
-
-          {/* Mini Section */}
-          <div className={styles.miniSection}>
-            <Grid container className={styles.miniSectionContainer}>
-              {/* Social media section */}
-              <Grid item lg={4} md={12} sm={12} xs={12} className={styles.socialMediaGrid} >
-                <div>
-                  <Link href="https://discord.com/invite/beradrome" target="_blank">
-                    <Image src='/socials/discord.svg' alt='social-media' width={40} height={40} className={styles.socialMediaIcon} />
-                  </Link>
-                  <Link href="https://twitter.com/beradrome" target="_blank">
-                    <Image src='/socials/twitter.svg' alt='social-media' width={40} height={40} className={styles.socialMediaIcon} />
-                  </Link>
-                  <Link href="https://github.com/BeraLabs" target="_blank">
-                    <Image src='/socials/github.svg' alt='social-media' width={40} height={40} className={styles.socialMediaIcon} />
-                  </Link>
-                  <Link href="https://discord.com/invite/beradrome" target="_blank">
-                    <Image src='/socials/medium.svg' alt='social-media' width={40} height={40} className={styles.socialMediaIcon} />
-                  </Link>
-                  <Link href="https://discord.com/invite/beradrome" target="_blank">
-                    <Image src='/socials/youtube.svg' alt='social-media' width={40} height={40} className={styles.socialMediaIcon} />
-                  </Link>
-                  <Link href="https://discord.com/invite/beradrome" target="_blank">
-                    <Image src='/socials/telegram.svg' alt='social-media' width={40} height={40} className={styles.socialMediaIcon} />
-                  </Link>
-                </div>
-              </Grid>
-              {/* End Social media */}
-
-              {/* Tap to scroll button */}
-              <Grid item lg={4} md={12} sm={12} xs={12} className={styles.scrollbuttonGrid}>
-                <div className={styles.scrollbutton}>
-                  <Button
-                    onClick={() =>
-                      scrollTo({ top: 1000, left: 0, behavior: "smooth" })
-                    }
-                  >
-                    <ArrowDownwardOutlinedIcon className={styles.arrowDown} />
-                  </Button>
-                </div>
-              </Grid>
-              {/* End Tap to scroll button */}
-
-              <Grid item lg={4}>
-
+                {/* End of Buttons Grid */}
               </Grid>
             </Grid>
+            {/* End of Main Text Grid */}
           </div>
-          {/* End mini Section */}
+        </Grid>
+        {/* End of Main Container Grid */}
+
+        {/* Mini Section */}
+        <div className={`${styles.miniSection} `}>
+          <Grid container className={styles.miniSectionContainer}>
+            {/* Social media section */}
+            <Grid item lg={4} md={12} sm={12} xs={12} className={styles.socialMediaGrid} >
+              <div>
+                <Link href="https://discord.com/invite/beradrome" target="_blank">
+                  <Image src='/socials/discord.svg' alt='social-media' width={40} height={40} className={styles.socialMediaIcon} />
+                </Link>
+                <Link href="https://twitter.com/beradrome" target="_blank">
+                  <Image src='/socials/twitter.svg' alt='social-media' width={40} height={40} className={styles.socialMediaIcon} />
+                </Link>
+                <Link href="https://github.com/BeraLabs" target="_blank">
+                  <Image src='/socials/github.svg' alt='social-media' width={40} height={40} className={styles.socialMediaIcon} />
+                </Link>
+                <Link href="https://discord.com/invite/beradrome" target="_blank">
+                  <Image src='/socials/medium.svg' alt='social-media' width={40} height={40} className={styles.socialMediaIcon} />
+                </Link>
+                <Link href="https://discord.com/invite/beradrome" target="_blank">
+                  <Image src='/socials/youtube.svg' alt='social-media' width={40} height={40} className={styles.socialMediaIcon} />
+                </Link>
+                <Link href="https://discord.com/invite/beradrome" target="_blank">
+                  <Image src='/socials/telegram.svg' alt='social-media' width={40} height={40} className={styles.socialMediaIcon} />
+                </Link>
+              </div>
+            </Grid>
+            {/* End Social media */}
+
+            {/* Tap to scroll button */}
+            <Grid item lg={4} md={12} sm={12} xs={12} className={styles.scrollbuttonGrid}>
+              <div className={styles.scrollbutton}>
+                <Button
+                  onClick={() =>
+                    scrollTo({ top: 950, left: 0, behavior: "smooth" })
+                  }
+                >
+                  <ArrowDownwardOutlinedIcon className={styles.arrowDown} />
+                </Button>
+              </div>
+            </Grid>
+            {/* End Tap to scroll button */}
+
+            <Grid item lg={4}>
+
+            </Grid>
+          </Grid>
         </div>
+        {/* End mini Section */}
       </div>
       {/* End Home Section */}
 
-
       {/* Statistics */}
       <div className={styles.statistics}>
-        <Grid container spacing={2}>
+        <Grid container spacing={2} className="relative top-0">
           <Grid item lg={4} md={12} sm={12} xs={12} >
             <Typography variant="h1" className={styles.text}>
               Trusted by&nbsp;
@@ -472,6 +436,7 @@ function Home() {
       </div>
       {/* End Lend and Borrow Info */}
 
+      {/* Show more btn */}
       <div className={`${styles.section} ${styles.responsive} h-[200px] flex justify-center`}>
         <div>
           <Button className={`${styles.buttons} bg-beraBlue justify-center`}>
@@ -479,6 +444,7 @@ function Home() {
           </Button>
         </div>
       </div>
+      {/* Show more btn */}
 
       {/* Footer */}
       <div className={styles.footer}>
