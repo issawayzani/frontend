@@ -611,6 +611,7 @@ function Setup() {
           </div>
           <div className={classes.massiveInputAmount}>
             <TextField
+              className={classes.test}
               placeholder="0.00"
               fullWidth
               error={amountError}
