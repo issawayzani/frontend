@@ -58,11 +58,11 @@ function Swap({ changeTheme }) {
               className="color-[#7e99b0] my-7 mx-auto max-w-3xl text-center text-base sm:text-lg"
               variant="body2"
             >
-              Swap between Velocimeter supported stable and volatile assets.
+              Swap between Beradrome supported stable and volatile assets.
             </Typography>
             <Button
               disableElevation
-              className="scale-90 rounded-3xl border border-solid border-green-300 bg-green-300 px-6 pt-3 pb-4 font-bold transition-all duration-300 hover:scale-95 hover:bg-emerald-300"
+              className="scale-90 rounded-3xl border border-solid border-[#4639bf] bg-[#4639bf] px-6 pt-3 pb-4 font-bold transition-all duration-300 hover:scale-95 hover:bg-emerald-300"
               variant="contained"
               onClick={onAddressClicked}
             >
