@@ -3,7 +3,8 @@
   flex-direction: column;
   align-items: flex-start;
   margin: auto;
-  margin-top: 90px;
+  background: #181346;
+  margin-top: 130px;
   max-width: 485px;
   width: calc(100% - 180px);
 }
@@ -52,6 +53,7 @@
 .bottomLeftButton {
   border-radius: 8px 8px 0 0 !important;
   width: 100%;
+  background: #9757FF;
   min-height: 50px;
   display: flex;
   align-items: center;
@@ -94,7 +96,7 @@
 .activeIcon {
   height: 2px;
   width: 100%;
-  background: linear-gradient(-45deg, #23a6d5, #234ce7);
+  background: #181346;
   background-size: 400% 400%;
   animation: gradient 35s ease infinite;
   display: inline-block;
@@ -148,7 +150,7 @@
 .inputBalanceTextSlippage {
   font-weight: 100 !important;
   font-size: 12px !important;
-  color: #7e99b0;
+  color: white;
 }
 
 .balances {
@@ -230,12 +232,15 @@
   flex-direction: column;
   width: 100%;
   border-radius: 9px 9px 0 0;
-  background: rgb(23, 52, 72) !important;
-  color: rgb(6, 211, 215) !important;
+  background: #9757FF !important;
+  color: white !important;
 }
 
 .toggleButtons:hover {
-  background: rgb(19, 44, 60) !important;
+  background: #181346 !important;
+}
+.toggleButtons:active {
+  background: #9757FF !important;
 }
 
 .button {
@@ -245,7 +250,7 @@
   transition: none !important;
   opacity: 1;
   background: none !important;
-  color: rgb(6, 211, 215) !important;
+  color: white !important;
 }
 
 /* .buttonActive {
@@ -273,13 +278,13 @@
 }
 
 .buttonOverride {
-  background: #272826 !important;
-  color: rgb(6, 211, 215) !important;
+  background: #9757FF !important;
+  color: white !important;
   font-weight: 700 !important;
 }
 
 .buttonOverride:hover {
-  background: rgb(19, 44, 60) !important;
+  background: #181346 !important;
 }
 
 .swapIconContainer {
@@ -292,10 +297,11 @@
 }
 
 .swapIconSubContainer {
-  background: #161b2c;
   border-radius: 9px;
   height: 38px;
-  z-index: 1;
+  align-items: center;
+  justify-content: center;
+  display :flex;
 }
 
 .swapIcon {
@@ -317,7 +323,7 @@
   border-radius: 10px;
   width: 100%;
   align-items: center;
-  background: #272826;
+  background: #261F6C;
 }
 
 .massiveInputAssetSelect {
@@ -362,7 +368,7 @@
   border-radius: 10px;
   width: 100%;
   align-items: center;
-  background: #272826;
+  background: #181346;
   min-height: 50px;
 }
 
@@ -436,9 +442,9 @@
 .depositInfoHeading {
   width: 100%;
   font-weight: 700 !important;
-  color: #06d3d7 !important;
+  color: #f5fafa !important;
   padding-bottom: 6px !important;
-  border-bottom: 1px solid rgba(126, 153, 176, 0.2);
+  border-bottom: 1px solid #4639BF;
   font-size: 14px !important;
 }
 
@@ -535,19 +541,20 @@
 .toggleOption {
   padding: 20px;
   border-radius: 8px;
-  color: #7e99b0;
+  color: white;
+  border: 1px solid #4639BF;
   cursor: pointer;
 }
 
 .toggleOption:hover {
-  background: rgb(23, 52, 72) !important;
-  color: rgb(6, 211, 215) !important;
+  background: #9757FF!important;
+  color: rgb(232, 246, 247) !important;
 }
 
 .toggleOption.active {
-  border: 1px solid #06d3d7;
-  background: rgb(23, 52, 72) !important;
-  color: rgb(6, 211, 215) !important;
+  border: 1px solid #4639BF;
+  background: #9757FF !important;
+  color: rgb(234, 246, 247) !important;
 }
 
 .toggleOptionText {
@@ -617,7 +624,7 @@
   border-radius: 10px;
   width: 100%;
   align-items: center;
-  background: #272826;
+  background: #181346;
   max-width: 112px;
   min-height: 50px;
 }
