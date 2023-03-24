@@ -7,7 +7,7 @@ import { withTheme } from "@mui/styles";
 
 import classes from "./navigation.module.css";
 import Image from 'next/image';
-
+import {Box} from '@mui/material'
 function Navigation() {
   const router = useRouter();
   const [active, setActive] = useState("home");
@@ -20,7 +20,9 @@ function Navigation() {
     if (activePath.includes("swap")) {
       setActive("swap");
     }
-    if (activePath.includes("liquidity")) {
+    if (activePath.includes("liquidity/create")) {
+      setActive("liquidity/create");
+    } else if (activePath.includes("liquidity"))  {
       setActive("liquidity");
     }
     if (activePath.includes("vest")) {
@@ -42,22 +44,29 @@ function Navigation() {
 
   const renderNavs = () => {
     return (
+      <Box mb="20px">
       <div className={classes.navToggles}>
         {renderSubNav(`Home`, "home")}
         {renderSubNav("Swap", "swap")}
-        {renderSubNav("Liquidity", "liquidity")}
-        {renderSubNav("Farms", "farms")}
-        {renderSubNav("hiBERO", "hibero")}
-        {/* {renderSubNav("Vest", "vest")}
+        {renderSubNav("Liquidity", "addliquidity")}
+        {renderSubNav("Farms", "liquidity")}
+        {/* {renderSubNav("hiBERO", "hibero")} */}
+        {renderSubNav("Vest", "vest")}
         {renderSubNav("Vote", "vote")}
         {renderSubNav("Rewards", "rewards")}
-        {renderSubNav("Bribe", "bribe")} */}
+        {renderSubNav("Bribe", "bribe")} 
       </div>
+      </Box>
     );
   };
 
   const renderSubNav = (title: string, link: string) => {
+    if (link ==="addliquidity") {
+      link = "liquidity/create"
+    } 
+  
     return (
+      
       <Link href={"/" + link}>
         <a
           className={
@@ -65,8 +74,9 @@ function Navigation() {
               ? `${classes.navButton} ${classes.testChange}`
               : classes.navButton
           }
-        >
+        > 
           <Image src={`/images/menu_${title}_icon.svg`} width={20} height={20} />
+
           <Typography variant="h2" className={classes.subtitleText}>
             {title}
           </Typography>
