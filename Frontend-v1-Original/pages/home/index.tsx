@@ -158,7 +158,7 @@ function Home() {
           <div className="relative flex flex-row gap-4">
             <div className="relative m-5 p-5">
               <div className="mb-3 flex flex-row">
-                <Image src={'/images/menu_Swap_icon.svg'} width={30} height={30} />
+                <Image src={'/images/menu_Swap_icon.svg'} width={50} height={50} />
                 <Typography variant="h1" fontSize={'50px'} className="font-montserrat font-medium ml-5">
                   Swap your favourite tokens
                 </Typography>
@@ -198,7 +198,7 @@ function Home() {
           <div className="relative flex flex-row-reverse gap-4">
             <div className="relative m-5 p-5">
               <div className="mb-3 flex flex-row">
-                <Image src={'/images/menu_Farms_icon.svg'} width={30} height={30} />
+                <Image src={'/images/menu_Farms_icon.svg'} width={50} height={50} />
                 <Typography variant="h1" fontSize={'50px'} className="font-montserrat font-medium ml-5">
                   Earn passively by farming
                 </Typography>
@@ -238,7 +238,7 @@ function Home() {
           <div className="relative flex flex-row gap-4">
             <div className="relative m-5 p-5">
               <div className="mb-3 flex flex-row">
-                <Image src={'/images/menu_Bridge_icon.svg'} width={30} height={30} />
+                <Image src={'/images/menu_Bridge_icon.svg'} width={50} height={50} />
                 <Typography variant="h1" fontSize={'50px'} className="font-montserrat font-medium ml-5">
                   Bridge your tokens
                 </Typography>
@@ -278,7 +278,7 @@ function Home() {
           <div className="relative flex flex-row-reverse gap-4">
             <div className="relative m-5 p-5">
               <div className="mb-3 flex flex-row">
-                <Image src={'/images/menu_Lend_icon.svg'} width={30} height={30} />
+                <Image src={'/images/menu_Lend_icon.svg'} width={50} height={50} />
                 <Typography variant="h1" fontSize={'50px'} className="font-montserrat font-medium ml-5">
                   Lend and borrow
                 </Typography>
@@ -401,7 +401,7 @@ function Home() {
                   <a href="#" className="hover:underline ">CoinGecko</a>
                 </li>
                 <li className="mb-2">
-                  <a href="https://discord.gg/4eeurUVvTy" className="hover:underline">CoinMarketCap</a>
+                  <a href="#" className="hover:underline">CoinMarketCap</a>
                 </li>
               </ul>
             </div>
@@ -435,7 +435,7 @@ function Home() {
         {/* mini footer */}
       </footer>
 
-    </div >
+    </div>
   );
 }
 
