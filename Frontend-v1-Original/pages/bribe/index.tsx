@@ -121,7 +121,7 @@ function Bribes() {
             className="color-[#7e99b0] my-7 mx-auto max-w-3xl text-center text-base sm:text-lg"
             variant="body2"
           >
-            Use your veFLOW to vote for your selected pool&apos;s rewards
+            Use your hiBERO to vote for your selected pool&apos;s rewards
             distribution or create a bribe to encourage others to do the same.
           </Typography>
           <Button
