@@ -104,7 +104,7 @@ function Home() {
               <div className="py-auto my-auto bg-beraPurple p-4 w-[60px] h-[60px] rounded-[50%] flex justify-center">
                 <Button
                   onClick={() =>
-                    scrollTo({ top: 950, left: 0, behavior: "smooth" })
+                    scrollTo({ top: 900, left: 0, behavior: "smooth" })
                   }
                 >
                   <ArrowDownwardOutlinedIcon className="text-white text-[30px]" />
