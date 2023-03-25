@@ -134,15 +134,18 @@ html:not([data-scroll="0"]) .headerContainer {
   display: flex;
   align-items: center;
   margin-left: 14px !important;
-  min-height: 50px;
-  background-color: #040105 !important;
+  min-height: 40px;
+  background-color: #181346 !important;
   border: 0 !important;
-  border-radius: 40px !important;
-  color: rgba(255, 255, 255, 0.87) !important;
+  border-radius: 5px !important;
   padding-left: 26px !important;
   padding-right: 26px !important;
   position: fixed;
   z-index: 10030 !important;
+}
+
+.accountButton:hover {
+  opacity: 0.8;
 }
 
 .iconColor {
