@@ -269,7 +269,7 @@ function Header() {
 
         <div
           style={{
-            width: "260px",
+            width: "350px",
             display: "flex",
             justifyContent: "flex-end",
           }}
@@ -299,6 +299,21 @@ function Header() {
               </StyledBadge>
             </IconButton>
           )}
+
+          <Button
+            disableElevation
+            className={classes.accountButton}
+            variant="contained"
+            color="primary"
+            aria-controls="simple-menu"
+            aria-haspopup="true"
+          >
+            <Image src={'/images/honey.svg'} width={20} height={20} />
+
+            <Typography className={`${classes.headBtnTxt} ml-2`}>
+              0.0009
+            </Typography>
+          </Button>
 
           {account && account.address ? (
             <div>

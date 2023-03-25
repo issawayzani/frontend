@@ -7,8 +7,6 @@ import HelpOutlineOutlinedIcon from '@mui/icons-material/HelpOutlineOutlined';
 
 import { useScrollTo } from "react-use-window-scroll";
 
-import { styles } from './styles'
-
 
 function Home() {
   const router = useRouter();
@@ -56,7 +54,7 @@ function Home() {
         {/* End of Main Container Grid */}
 
         {/* Mini section */}
-        <div className="relative top-1/3 lg:mt-[5rem] sm:mt-[0.5rem] w-[80vw] mx-auto">
+        <div className="relative top-1/3 2xl:mt-[5rem] xl:mt-[3rem] lg:mt-[2rem] sm:mt-[0.5rem] w-[80vw] mx-auto">
           <div className="flex lg:flex-row justify-center">
 
             {/* Social Media */}
@@ -100,6 +98,7 @@ function Home() {
             </div>
             {/* Social Media */}
 
+            {/* scroller */}
             <div>
               <div className="py-auto my-auto bg-beraPurple p-4 w-[60px] h-[60px] rounded-[50%] flex justify-center">
                 <Button
@@ -111,6 +110,7 @@ function Home() {
                 </Button>
               </div>
             </div>
+            {/* scroller */}
 
           </div>
         </div>
@@ -313,7 +313,7 @@ function Home() {
       {/* Show more btn */}
       <div className='relative w-full flex justify-center my-5'>
         <div>
-          <Button className={`${styles.buttons} bg-beraBlue justify-center`}>
+          <Button className={`relative bottom-0 min-w-[90px] animate-titleAnim font-montserrat font-bold text-md capitalize text-white delay-[400ms] max-md:float-none max-md:m-0 max-md:w-full rounded-[5px] bg-beraBlue justify-center`}>
             Show More
           </Button>
         </div>
