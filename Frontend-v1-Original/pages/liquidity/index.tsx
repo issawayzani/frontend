@@ -54,22 +54,21 @@ function Liquidity() {
               className="text-center font-montserrat text-2xl font-thin text-white sm:text-3xl"
               variant="h1"
             >
-              Liquidity Pools
+              Farms
             </Typography>
             <Typography
               className="color-[#7e99b0] my-7 mx-auto max-w-3xl text-center text-base sm:text-lg"
               variant="body2"
             >
-              Create a pair or add liquidity to existing stable or volatile
-              Liquidity Pairs.
+              Create a pair
             </Typography>
             <Button
               disableElevation
-              className="scale-90 rounded-3xl border border-solid border-green-300 bg-green-300 px-6 pt-3 pb-4 font-bold transition-all duration-300 hover:scale-95 hover:bg-emerald-300"
+              className="scale-90 rounded-3xl border border-solid border-[#4639bf] bg-[#9757FF] px-6 pt-3 pb-4 font-bold transition-all duration-300 hover:scale-95 hover:bg-[#4639bf]"
               variant="contained"
               onClick={onAddressClicked}
             >
-              <Typography>Connect Wallet to Continue</Typography>
+              <Typography color="white">Connect Wallet to Continue</Typography>
             </Button>
           </div>
         </Paper>
