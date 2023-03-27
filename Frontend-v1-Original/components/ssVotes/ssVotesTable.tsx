@@ -155,6 +155,10 @@ const useStyles = makeStyles((theme) => ({
   },
   tableContainer: {
     overflowX: "hidden",
+    background:"#181346"
+  },
+  TablePagination:{
+    background:"#261F6C"
   },
   overrideTableHead: {
     borderBottom: "1px solid rgba(104,108,122,0.2) !important",
@@ -567,6 +571,7 @@ export default function EnhancedTable({
         count={gauges.length}
         rowsPerPage={rowsPerPage}
         page={page}
+        className={classes.TablePagination}
         onPageChange={handleChangePage}
         onRowsPerPageChange={handleChangeRowsPerPage}
       />

@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback, useMemo } from "react";
 import {
   Paper,
   Typography,
+  Box,
   Button,
   CircularProgress,
   InputAdornment,
@@ -318,7 +319,7 @@ export default function ssVotes() {
           token={token}
         />
       </Paper>
-      <Paper elevation={10} className={classes.actionButtons}>
+      <Box className={classes.actionButtons}>
         <div className={classes.infoSection}>
           <Typography>Voting Power Used: </Typography>
           <Typography
@@ -348,7 +349,7 @@ export default function ssVotes() {
             )}
           </Button>
         </div>
-      </Paper>
+      </Box>
     </div>
   );
 }
