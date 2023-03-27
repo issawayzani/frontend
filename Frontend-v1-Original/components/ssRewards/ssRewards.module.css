@@ -23,7 +23,7 @@
 }
 
 .helpText {
-  color: rgba(126, 153, 176, 0.9);
+  color: white;
   margin: 0 15px 0 0 !important;
   padding: 15px 0;
 }
@@ -52,8 +52,8 @@
 }
 
 .buttonOverride {
-  background: #272826 !important;
-  color: rgb(6, 211, 215) !important;
+  background: #9757FF !important;
+  color: white !important;
   font-weight: 700 !important;
   width: 100%;
   min-width: 200px !important;
@@ -89,7 +89,7 @@
   border-radius: 10px;
   width: 100%;
   align-items: center;
-  background: #272826;
+  background: #181346;
   padding-left: 20px;
   min-height: 60px;
 }
@@ -139,9 +139,9 @@
 .disclaimer {
   font-size: 13px !important;
   font-weight: 200 !important;
-  border: 1px solid rgb(6, 211, 215) !important;
+  border: 1px solid #212b48 !important;
   border-radius: 10px;
-  background: #0e110c !important;
+  background: #181346 !important;
   padding: 21.5px !important;
 }
 
