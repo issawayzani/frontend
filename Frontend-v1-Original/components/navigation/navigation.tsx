@@ -92,7 +92,7 @@ function Navigation() {
         onClick={() => window.open("https://docs.beradrome.com/", "_blank")}
       >
         <Typography variant="h2" className={classes.subtitleText}>
-          Documentation
+          Docs
         </Typography>
       </button>
     );
