@@ -126,7 +126,7 @@ function Bribes() {
           </Typography>
           <Button
             disableElevation
-            className="scale-90 rounded-3xl border border-solid border-green-300 bg-green-300 px-6 pt-3 pb-4 font-bold transition-all duration-300 hover:scale-95 hover:bg-emerald-300"
+            className="scale-90 rounded-3xl border border-solid border-[#4639bf] bg-[#9757FF] px-6 pt-3 pb-4 font-bold transition-all duration-300 hover:scale-95 hover:bg-[#4639bf]"
             variant="contained"
             onClick={onAddressClicked}
           >
