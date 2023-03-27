@@ -7,29 +7,35 @@ import HelpOutlineOutlinedIcon from '@mui/icons-material/HelpOutlineOutlined';
 
 import { useScrollTo } from "react-use-window-scroll";
 
+const styles = {
+  wrapper: "relative flex w-full flex-col",
+  mainSection: "relative w-full h-screen",
+  subSection: "relative w-full",
+}
+
 
 function Home() {
   const router = useRouter();
   const scrollTo = useScrollTo();
 
   return (
-    <div className='relative flex w-full flex-col'>
+    <div className={styles.wrapper}>
 
       {/* Home Section */}
-      <div className='relative w-full h-screen'>
+      <div className={styles.mainSection}>
 
         {/* Main Container Grid */}
-        <div className="relative mx-auto top-1/2 -translate-y-1/2 w-[80vw] flex flex-row justify-center">
+        <div className="relative mx-auto top-1/2 -translate-y-1/2 lg:w-[80vw] md:w-[50vw] sm:w-[50vw] flex flex-row justify-center lg:pt-0 sm:pt-[30em]">
           <div className="relative flex lg:flex-row md:flex-col-reverse gap-4 sm:flex-col-reverse xs:flex-col-reverse">
-            <div className="relative m-5 p-5">
+            <div className="relative m-5 p-5 lg:w-[55vw] md:w-[50vw] sm:w-[]">
               <div className="mb-3">
                 <Typography variant="h1" fontSize={'50px'} className="font-montserrat font-black uppercase">
                   Honey <span className="text-beraPurple">Talks</span>
                 </Typography>
               </div>
 
-              <div className="my-[50px] py-5 lg:w-[55vw] md:w-[50vw] sm:w-[80vw] xs:w-[10vw]">
-                <Typography variant="body1" className="font-montserrat font-medium lg:text-xl md:text-lg sm:text-lg xs:text-md">
+              <div className="my-[50px] py-5 lg:w-[45vw] md:w-[50vw] sm:w-[80vw] xs:w-[10vw]">
+                <Typography variant="body1" className="font-montserrat font-medium lg:text-xl md:text-lg sm:text-lg xs:text-md mb-2">
                   Beradrome is the liquidity and low-slippage trading hub on Berachain. Beradrome combines features from the top AMM models into one power house, taking ve(3,3) to a new level.
                 </Typography>
                 <Typography variant="body1" className="font-montserrat font-medium lg:text-xl md:text-lg sm:text-lg xs:text-md">
@@ -79,6 +85,13 @@ function Home() {
                     <path d="M14 4.24756C8.475 4.24756 4 8.72506 4 14.2476C4 18.6667 6.865 22.4142 10.8375 23.7351C11.3375 23.8292 11.5208 23.5201 11.5208 23.2542C11.5208 23.0167 11.5125 22.3876 11.5083 21.5542C8.72667 22.1576 8.14 20.2126 8.14 20.2126C7.685 19.0584 7.0275 18.7501 7.0275 18.7501C6.12167 18.1301 7.0975 18.1426 7.0975 18.1426C8.10167 18.2126 8.62917 19.1726 8.62917 19.1726C9.52083 20.7017 10.97 20.2601 11.5417 20.0042C11.6317 19.3576 11.8892 18.9167 12.175 18.6667C9.95417 18.4167 7.62 17.5567 7.62 13.7251C7.62 12.6334 8.0075 11.7417 8.64917 11.0417C8.53667 10.7892 8.19917 9.77256 8.73667 8.39506C8.73667 8.39506 9.57417 8.12673 11.4867 9.42006C12.2867 9.19756 13.1367 9.08756 13.9867 9.08256C14.8367 9.08756 15.6867 9.19756 16.4867 9.42006C18.3867 8.12673 19.2242 8.39506 19.2242 8.39506C19.7617 9.77256 19.4242 10.7892 19.3242 11.0417C19.9617 11.7417 20.3492 12.6334 20.3492 13.7251C20.3492 17.5667 18.0117 18.4126 15.7867 18.6584C16.1367 18.9584 16.4617 19.5717 16.4617 20.5084C16.4617 21.8467 16.4492 22.9217 16.4492 23.2467C16.4492 23.5092 16.6242 23.8217 17.1367 23.7217C21.1375 22.4101 24 18.6601 24 14.2476C24 8.72506 19.5225 4.24756 14 4.24756" />
                   </svg>
                   <span className="sr-only">Github</span>
+                </a>
+
+                <a href="#" className="text-white hover:text-beraPurple">
+                  <svg fill="currentColor" viewBox="0 0 24 24" width={30} height={30} aria-hidden="true">
+                    <path d="M23.5817 9.15506C23.4687 8.72945 23.2459 8.341 22.9355 8.02861C22.6252 7.71622 22.2382 7.49084 21.8133 7.37506C20.2542 6.95422 14 6.95422 14 6.95422C14 6.95422 7.74583 6.95422 6.18583 7.37506C5.76117 7.49105 5.37441 7.7165 5.06423 8.02888C4.75405 8.34125 4.53133 8.72959 4.41833 9.15506C4 10.7251 4 14.0001 4 14.0001C4 14.0001 4 17.2751 4.41833 18.8451C4.53132 19.2707 4.75415 19.6591 5.06449 19.9715C5.37484 20.2839 5.76181 20.5093 6.18667 20.6251C7.74583 21.0459 14 21.0459 14 21.0459C14 21.0459 20.2542 21.0459 21.8142 20.6251C22.2391 20.5094 22.6261 20.284 22.9364 19.9716C23.2468 19.6592 23.4696 19.2707 23.5825 18.8451C24 17.2751 24 14.0001 24 14.0001C24 14.0001 24 10.7251 23.5817 9.15506ZM11.9542 16.9734V11.0267L17.1817 14.0001L11.9542 16.9734Z" />
+                  </svg>
+                  <span className="sr-only">Youtube</span>
                 </a>
 
                 <a href="#" className="text-white hover:text-beraPurple">
@@ -151,7 +164,7 @@ function Home() {
       {/* End Statistics */}
 
       {/* Swap info section */}
-      <div className='relative w-full'>
+      <div className={styles.subSection}>
 
         {/* Main Container Grid */}
         <div className="relative mx-auto my-5 w-[80vw] flex flex-row justify-center">
@@ -175,8 +188,8 @@ function Home() {
 
               <div className="flex flex-row justify-start">
                 <div className="border border-beraBlue rounded-[5px] flex justify-center p-4">
-                  <Button className="bg-beraPurple rounded-[5px] text-white text-[15px] mr-3">Swap</Button>
-                  <Button className="bg-beraBlue rounded-[5px] text-white text-[15px]">Learn More</Button>
+                  <Button className="bg-beraPurple rounded-[5px] text-white text-[15px] hover:opacity-80 mr-3">Swap</Button>
+                  <Button className="bg-beraBlue rounded-[5px] text-white text-[15px] hover:opacity-80">Learn More</Button>
                 </div>
               </div>
 
@@ -191,7 +204,7 @@ function Home() {
       {/* End Swap info section */}
 
       {/* Farm info section */}
-      <div className='relative w-full'>
+      <div className={styles.subSection}>
 
         {/* Main Container Grid */}
         <div className="relative mx-auto my-5 w-[80vw] flex flex-row justify-center">
@@ -215,8 +228,8 @@ function Home() {
 
               <div className="flex flex-row justify-start">
                 <div className="border border-beraBlue rounded-[5px] flex justify-center p-4">
-                  <Button className="bg-beraPurple rounded-[5px] text-white text-[15px] mr-3">Farm</Button>
-                  <Button className="bg-beraBlue rounded-[5px] text-white text-[15px]">Learn More</Button>
+                  <Button className="bg-beraPurple rounded-[5px] text-white text-[15px] hover:opacity-80 mr-3">Farm</Button>
+                  <Button className="bg-beraBlue rounded-[5px] text-white text-[15px] hover:opacity-80">Learn More</Button>
                 </div>
               </div>
 
@@ -231,7 +244,7 @@ function Home() {
       {/* End Farm info section */}
 
       {/* Bridge info section */}
-      <div className='relative w-full'>
+      <div className={styles.subSection}>
 
         {/* Main Container Grid */}
         <div className="relative mx-auto my-5 w-[80vw] flex flex-row justify-center">
@@ -255,8 +268,8 @@ function Home() {
 
               <div className="flex flex-row justify-start">
                 <div className="border border-beraBlue rounded-[5px] flex justify-center p-4">
-                  <Button className="bg-beraPurple rounded-[5px] text-white text-[15px] mr-3">Bridge</Button>
-                  <Button className="bg-beraBlue rounded-[5px] text-white text-[15px]">Learn More</Button>
+                  <Button className="bg-beraPurple rounded-[5px] text-white text-[15px] hover:opacity-80 mr-3">Bridge</Button>
+                  <Button className="bg-beraBlue rounded-[5px] text-white text-[15px] hover:opacity-80">Learn More</Button>
                 </div>
               </div>
 
@@ -271,7 +284,7 @@ function Home() {
       {/* End Bridge info section */}
 
       {/* lend and Borrow info section */}
-      <div className='relative w-full'>
+      <div className={styles.subSection}>
 
         {/* Main Container Grid */}
         <div className="relative mx-auto my-5 w-[80vw] flex flex-row justify-evenly">
@@ -295,8 +308,8 @@ function Home() {
 
               <div className="flex flex-row justify-start">
                 <div className="border border-beraBlue rounded-[5px] flex justify-center p-4">
-                  <Button className="bg-beraPurple rounded-[5px] text-white text-[15px] mr-3">Lend and Borrow</Button>
-                  <Button className="bg-beraBlue rounded-[5px] text-white text-[15px]">Learn More</Button>
+                  <Button className="bg-beraPurple rounded-[5px] text-white text-[15px] hover:opacity-80 mr-3">Lend and Borrow</Button>
+                  <Button className="bg-beraBlue rounded-[5px] text-white text-[15px] hover:opacity-80">Learn More</Button>
                 </div>
               </div>
 
@@ -311,9 +324,9 @@ function Home() {
       {/* End lend and Borrow info section */}
 
       {/* Show more btn */}
-      <div className='relative w-full flex justify-center my-5'>
-        <div>
-          <Button className={`relative bottom-0 min-w-[90px] animate-titleAnim font-montserrat font-bold text-md capitalize text-white delay-[400ms] max-md:float-none max-md:m-0 max-md:w-full rounded-[5px] bg-beraBlue justify-center`}>
+      <div className={`${styles.subSection} flex justify-center my-5`}>
+        <div className="mb-5">
+          <Button className={`relative bottom-0 min-w-[90px] animate-titleAnim font-montserrat font-bold text-md capitalize text-white delay-[400ms] max-md:float-none max-md:m-0 max-md:w-full rounded-[5px] bg-beraBlue justify-center hover:opacity-80`}>
             Show More
           </Button>
         </div>
@@ -349,6 +362,13 @@ function Home() {
 
               <a href="#" className="text-white hover:text-beraPurple">
                 <svg fill="currentColor" viewBox="0 0 24 24" width={30} height={30} aria-hidden="true">
+                  <path d="M23.5817 9.15506C23.4687 8.72945 23.2459 8.341 22.9355 8.02861C22.6252 7.71622 22.2382 7.49084 21.8133 7.37506C20.2542 6.95422 14 6.95422 14 6.95422C14 6.95422 7.74583 6.95422 6.18583 7.37506C5.76117 7.49105 5.37441 7.7165 5.06423 8.02888C4.75405 8.34125 4.53133 8.72959 4.41833 9.15506C4 10.7251 4 14.0001 4 14.0001C4 14.0001 4 17.2751 4.41833 18.8451C4.53132 19.2707 4.75415 19.6591 5.06449 19.9715C5.37484 20.2839 5.76181 20.5093 6.18667 20.6251C7.74583 21.0459 14 21.0459 14 21.0459C14 21.0459 20.2542 21.0459 21.8142 20.6251C22.2391 20.5094 22.6261 20.284 22.9364 19.9716C23.2468 19.6592 23.4696 19.2707 23.5825 18.8451C24 17.2751 24 14.0001 24 14.0001C24 14.0001 24 10.7251 23.5817 9.15506ZM11.9542 16.9734V11.0267L17.1817 14.0001L11.9542 16.9734Z" />
+                </svg>
+                <span className="sr-only">Youtube</span>
+              </a>
+
+              <a href="#" className="text-white hover:text-beraPurple">
+                <svg fill="currentColor" viewBox="0 0 24 24" width={30} height={30} aria-hidden="true">
                   <path d="M24 8.41666H23.209C22.9153 8.41666 22.5 8.84029 22.5 9.11151V18.9417C22.5 19.2132 22.9153 19.5833 23.209 19.5833H24V21.9167H16.8333V19.5833H18.3333V9.24999H18.2598L14.757 21.9167H12.0451L8.5875 9.24999H8.5V19.5833H10V21.9167H4V19.5833H4.7683C5.0847 19.5833 5.5 19.2132 5.5 18.9417V9.11151C5.5 8.84029 5.0847 8.41666 4.7683 8.41666H4V6.08332H11.5027L13.966 15.25H14.0338L16.5199 6.08332H24V8.41666Z" />
                 </svg>
                 <span className="sr-only">Medium</span>
@@ -364,7 +384,7 @@ function Home() {
             {/* Social media */}
 
             {/* external pages */}
-            <ul className="text-white">
+            <ul className="text-white lg:flex lg:flex-col lg:gap-1 md:flex md:flex-row md:justify-center md:gap-4 sm:flex sm:flex-row sm:justify-center sm:gap-4 xs:flex xs:flex-row xs:justify-center xs:gap-4">
               <li className="mb-2">
                 <a href="#" className="hover:underline">About us</a>
               </li>
@@ -378,57 +398,61 @@ function Home() {
             {/* external pages */}
           </div>
 
-          {/* footer sections */}
-          <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
-            <div>
-              <h2 className="mb-4 text-sm font-semibold uppercase text-beraPurple">DEX</h2>
-              <ul className="text-white">
-                <li className="mb-2">
-                  <a href="#" className="hover:underline">Defi LIama</a>
-                </li>
-                <li className="mb-2">
-                  <a href="#" className="hover:underline">CoinGecko</a>
-                </li>
-                <li className="mb-2">
-                  <a href="#" className="hover:underline">CoinMarketCap</a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h2 className="mb-4 text-sm font-semibold uppercase text-beraPurple">BERO Token</h2>
-              <ul className="text-white">
-                <li className="mb-2">
-                  <a href="#" className="hover:underline ">CoinGecko</a>
-                </li>
-                <li className="mb-2">
-                  <a href="#" className="hover:underline">CoinMarketCap</a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h2 className="mb-4 text-sm font-semibold uppercase text-beraPurple">Exchanges</h2>
-              <ul className="text-white">
-                <li className="mb-2">
-                  <a href="#" className="hover:underline">Felix</a>
-                </li>
-                <li className="mb-2">
-                  <a href="#" className="hover:underline">Gate.io</a>
-                </li>
-                <li className="mb-2">
-                  <a href="#" className="hover:underline">MEXC</a>
-                </li>
-              </ul>
+          {/* footer subsections */}
+          <div className="flex flex-row justify-around">
+            <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+              <div>
+                <h2 className="mb-4 text-sm font-semibold uppercase text-beraPurple">DEX</h2>
+                <ul className="text-white">
+                  <li className="mb-2">
+                    <a href="#" className="hover:underline">Defi LIama</a>
+                  </li>
+                  <li className="mb-2">
+                    <a href="#" className="hover:underline">CoinGecko</a>
+                  </li>
+                  <li className="mb-2">
+                    <a href="#" className="hover:underline">CoinMarketCap</a>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h2 className="mb-4 text-sm font-semibold uppercase text-beraPurple">BERO Token</h2>
+                <ul className="text-white">
+                  <li className="mb-2">
+                    <a href="#" className="hover:underline ">CoinGecko</a>
+                  </li>
+                  <li className="mb-2">
+                    <a href="#" className="hover:underline">CoinMarketCap</a>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h2 className="mb-4 text-sm font-semibold uppercase text-beraPurple">Exchanges</h2>
+                <ul className="text-white">
+                  <li className="mb-2">
+                    <a href="#" className="hover:underline">Felix</a>
+                  </li>
+                  <li className="mb-2">
+                    <a href="#" className="hover:underline">Gate.io</a>
+                  </li>
+                  <li className="mb-2">
+                    <a href="#" className="hover:underline">MEXC</a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
-          {/* footer sections */}
+          {/* footer subsections */}
         </div>
         {/* footer section */}
 
         {/* mini footer */}
-        <div className="w-full mx-auto container md:p-6 p-4 md:flex md:items-center md:justify-between">
-          <span className="text-[15px] text-white sm:text-center"><HelpOutlineOutlinedIcon className="text-sm" /> 2022 Beradrome</span>
-          <div className="bg-beraPurple h-[2px] w-[60em] absolute left-1/4 "></div>
-          <div className="absolute bottom-1 right-[15em]">
+        <div className="w-full mx-auto container md:p-6 p-4 flex lg:justify-start md:flex-row md:items-center md:justify-start sm:items-center sm:justify-center sm:flex-col sm:gap-2 xs:justify-center">
+          <div className="lg:text-left md:text-center sm:text-center xs:text-center sm:mb-6 lg:mb-1 md:mb-0 flex">
+            <span className="text-[15px] text-white "><HelpOutlineOutlinedIcon className="text-sm" /> 2022 Beradrome</span>
+          </div>
+          <div className="bg-beraPurple h-[2px] lg:w-[60em] md:w-[25em] sm:w-[20em] absolute left-1/4 md:mx-5"></div>
+          <div className="absolute bottom-1 lg:right-[15em] md:right-[10em]">
             <span className="text-[#ADADAD]">Build 9e4746c</span>
           </div>
         </div>

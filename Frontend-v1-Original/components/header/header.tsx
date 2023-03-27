@@ -308,10 +308,9 @@ function Header() {
             aria-controls="simple-menu"
             aria-haspopup="true"
           >
-            <Image src={'/images/honey.svg'} width={20} height={20} />
-
+            <Image src='/images/honey.svg' width={30} height={30} />
             <Typography className={`${classes.headBtnTxt} ml-2`}>
-              0.0009
+              $0.0009
             </Typography>
           </Button>
 
