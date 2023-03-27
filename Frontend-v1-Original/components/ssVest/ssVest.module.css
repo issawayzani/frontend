@@ -2,6 +2,7 @@
   width: calc(100% - 180px);
   max-width: 485px;
   margin: 0 auto;
+  margin-top: 30px;
   position: relative;
 }
 
@@ -48,6 +49,7 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 4px;
+  background: #181346;
 }
 
 .contentBox {
@@ -146,6 +148,7 @@
   font-size: 15px !important;
   text-transform: capitalize !important;
   font-weight: 700 !important;
+  color: white;
 }
 
 .buttonStretch {
@@ -187,8 +190,7 @@
 }
 
 .buttonOverride {
-  background: #272826 !important;
-  color: rgb(6, 211, 215) !important;
+  background: #9757FF !important;
   font-weight: 700 !important;
 }
 
@@ -343,7 +345,7 @@
   border-radius: 10px;
   width: 100%;
   align-items: center;
-  background: #272826;
+  background: #261F6C;
 }
 
 .massiveInputAssetSelect {
