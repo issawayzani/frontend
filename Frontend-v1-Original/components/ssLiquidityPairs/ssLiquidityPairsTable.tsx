@@ -458,8 +458,8 @@ const EnhancedTableToolbar = (props) => {
   return (
     <Toolbar className={classes.toolbar}>
       <Grid container spacing={2}>
-        <Grid item lg={2} md={2} sm={12} xs={12}>
-          <Button
+        {/* <Grid item lg={2} md={2} sm={12} xs={12}>
+           <Button
             variant="contained"
             color="secondary"
             startIcon={<AddCircleOutline />}
@@ -470,8 +470,8 @@ const EnhancedTableToolbar = (props) => {
             <Typography className={classes.actionButtonText}>
               Add Liquidity
             </Typography>
-          </Button>
-        </Grid>
+          </Button> 
+        </Grid> */}
         <Grid item lg={9} md={9} sm={10} xs={10}>
           <TextField
             className={classes.searchContainer}

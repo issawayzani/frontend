@@ -4,6 +4,7 @@ import {
   Paper,
   Typography,
   Button,
+  Box,
   TextField,
   InputAdornment,
   CircularProgress,
@@ -288,7 +289,7 @@ export default function ssBribeCreate() {
                 className: classes.largeInput,
               }}
             />
-            <Typography color="textSecondary" className={classes.smallerText}>
+            <Typography color="white" className={classes.smallerText}>
               {asset?.symbol}
             </Typography>
           </div>
@@ -320,7 +321,7 @@ export default function ssBribeCreate() {
 
   return (
     <div className={classes.retain}>
-      <Paper elevation={0} className={classes.container}>
+      <Box className={classes.container}>
         <div className={classes.titleSection}>
           <Tooltip placement="top" title="Back to Voting">
             <IconButton className={classes.backButton} onClick={onBack}>
@@ -372,7 +373,7 @@ export default function ssBribeCreate() {
             </Button>
           </div>
         </div>
-      </Paper>
+      </Box>
     </div>
   );
 }

@@ -31,7 +31,7 @@ export default function Layout({
           content="Beradrome is the liquidity and low-slippage trading hub on Berachain. 
           Beradrome combines features from the top AMM models into one power house, taking ve(3,3) to a new level."
         />
-        <meta name="og:title" content="Berafrome" />
+        <meta name="og:title" content="Beradrome" />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <div className={classes.background} />
