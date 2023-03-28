@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/router";
+import Image from 'next/image';
 import {
   Paper,
   Grid,
@@ -9,6 +10,7 @@ import {
   InputAdornment,
   CircularProgress,
   Tooltip,
+  Box,
   IconButton,
   FormControlLabel,
   Switch,
@@ -1372,11 +1374,11 @@ export default function ssLiquidityManage() {
 
   return (
     <div className={classes.retain}>
-      <Paper elevation={0} className={classes.container}>
+      <Box  className={classes.container}>
         <div className={classes.toggleButtons}>
           <Grid container spacing={0}>
             <Grid item lg={6} md={6} sm={6} xs={6}>
-              <Paper
+              <Box
                 className={`${
                   activeTab === "deposit"
                     ? classes.buttonActive
@@ -1390,10 +1392,10 @@ export default function ssLiquidityManage() {
                     activeTab === "deposit" ? classes.activeIcon : ""
                   }`}
                 ></div>
-              </Paper>
+              </Box>
             </Grid>
             <Grid item lg={6} md={6} sm={6} xs={6}>
-              <Paper
+              <Box
                 className={`${
                   activeTab === "withdraw"
                     ? classes.buttonActive
@@ -1407,11 +1409,11 @@ export default function ssLiquidityManage() {
                     activeTab === "withdraw" ? classes.activeIcon : ""
                   }`}
                 ></div>
-              </Paper>
+              </Box>
             </Grid>
           </Grid>
         </div>
-        <div className={classes.titleSection}>
+        {/* <div className={classes.titleSection}>
           <Tooltip title="Back to Liquidity" placement="top">
             <IconButton className={classes.backButton} onClick={onBack}>
               <ArrowBack className={classes.backIcon} />
@@ -1420,7 +1422,12 @@ export default function ssLiquidityManage() {
           <Typography className={classes.titleText}>
             Manage Liquidity Pair
           </Typography>
-        </div>
+        </div> */}
+       <Box mb="20px">
+       <Image src={`/images/menu_Liquidity_icon.svg`} width={35} height={35}/>
+          ADD LIQUIDITY
+       </Box>
+
         <div className={classes.reAddPadding}>
           <div className={classes.inputsContainer}>
             {activeTab === "deposit" && (
@@ -1437,11 +1444,11 @@ export default function ssLiquidityManage() {
                   amount0Focused,
                   amount0Ref
                 )}
-                <div className={classes.swapIconContainer}>
+              
                   <div className={classes.swapIconSubContainer}>
                     <Add className={classes.swapIcon} />
                   </div>
-                </div>
+                
                 {renderMassiveInput(
                   "amount1",
                   amount1,
@@ -1914,7 +1921,7 @@ export default function ssLiquidityManage() {
             </div>
           )}
         </div>
-      </Paper>
+      </Box>
     </div>
   );
 }

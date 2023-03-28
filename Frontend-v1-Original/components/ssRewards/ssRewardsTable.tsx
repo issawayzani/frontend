@@ -261,6 +261,7 @@ const useStyles = makeStyles((theme) => ({
     border: "1px solid rgba(126,153,176,0.2)",
     width: "100%",
     display: "flex",
+    background:"#181346",
     flexDirection: "column",
     alignItems: "flex-end",
   },

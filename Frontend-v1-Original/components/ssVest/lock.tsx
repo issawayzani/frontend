@@ -3,6 +3,7 @@ import {
   Paper,
   Typography,
   Button,
+  Box,
   TextField,
   CircularProgress,
   RadioGroup,
@@ -308,7 +309,7 @@ export default function ssLock({ govToken, veToken }) {
 
   return (
     <>
-      <Paper elevation={0} className={classes.container3}>
+      <Box className={classes.container3}>
         <div className={classes.titleSection}>
           <Tooltip title="Back to Vest" placement="top">
             <IconButton className={classes.backButton} onClick={onBack}>
@@ -391,7 +392,7 @@ export default function ssLock({ govToken, veToken }) {
             )}
           </Button>
         </div>
-      </Paper>
+      </Box>
       <br />
       <br />
     </>

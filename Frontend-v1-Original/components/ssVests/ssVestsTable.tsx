@@ -8,6 +8,7 @@ import {
   Table,
   TableBody,
   TableCell,
+  Box,
   InputAdornment,
   TableContainer,
   TableHead,
@@ -262,8 +263,8 @@ const useStyles = makeStyles((theme) => ({
     height: "35px",
   },
   buttonOverride: {
-    color: "rgb(6, 211, 215)",
-    background: "#272826",
+    color: "white",
+    background: "#9757FF",
     fontWeight: "700",
     width: "100%",
     "&:hover": {
@@ -275,8 +276,9 @@ const useStyles = makeStyles((theme) => ({
     padding: "0px",
   },
   tableContainer: {
-    border: "1px solid rgba(104, 108, 122, 0.25)",
+    border: "1px solid #181346",
     width: "100%",
+    background:"#181346",
     display: "flex",
     flexDirection: "column",
     alignItems: "flex-end",
@@ -284,6 +286,7 @@ const useStyles = makeStyles((theme) => ({
   actionButtonText: {
     fontSize: "15px",
     fontWeight: "700",
+
   },
 }));
 
@@ -401,7 +404,7 @@ export default function EnhancedTable({ vestNFTs, govToken, veToken }) {
   return (
     <div className={classes.root}>
       <EnhancedTableToolbar />
-      <Paper elevation={0} className={classes.tableContainer}>
+      <Box  className={classes.tableContainer}>
         <TableContainer>
           <Table
             aria-labelledby="tableTitle"
@@ -520,7 +523,7 @@ export default function EnhancedTable({ vestNFTs, govToken, veToken }) {
           onPageChange={handleChangePage}
           onRowsPerPageChange={handleChangeRowsPerPage}
         />
-      </Paper>
+      </Box>
     </div>
   );
 }

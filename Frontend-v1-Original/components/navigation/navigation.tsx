@@ -61,8 +61,8 @@ function Navigation() {
           {renderSubNav("Vote", "vote")}
           {renderSubNav("Rewards", "rewards")}
           {renderSubNav("Bribe", "bribe")}
-        </div >
-      </Box >
+        </div>
+      </Box>
     );
   };
 

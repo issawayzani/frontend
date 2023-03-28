@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: flex-start;
   margin: auto;
-  margin-top: 90px;
+  background: #181346;
   max-width: 485px;
   width: calc(100% - 180px);
 }
@@ -140,7 +140,7 @@
 .inputBalanceText {
   font-weight: 100 !important;
   font-size: 12px !important;
-  color: #7e99b0;
+  color:white;
   margin-right: 6px !important;
   margin-top: 6px !important;
 }
@@ -268,8 +268,8 @@
 }
 
 .buttonOverride {
-  background: #272826 !important;
-  color: rgb(6, 211, 215) !important;
+  background: #9757FF !important;
+  color: white !important;
   font-weight: 700 !important;
 }
 
@@ -315,7 +315,7 @@
   border-radius: 10px;
   width: 100%;
   align-items: center;
-  background: #272826;
+  background: #261F6C;
 }
 
 .massiveInputAssetSelect {
@@ -487,7 +487,7 @@
   font-size: 15px !important;
   line-height: 23px !important;
   text-align: center;
-  color: #7E99B0 !important;
+  color: white !important;
 }
 
 .highlight {
@@ -551,6 +551,7 @@
   border-radius: 10px;
   width: calc(100% - 52px);
   margin: 25px 25px 0px 25px;
+  background: #261F6C;
   position: relative;
   min-height: 60px;
 }
@@ -562,7 +563,7 @@
 }
 
 .backIcon {
-  color: #06D3D7 !important;
+  color: white !important;
 }
 
 .titleText {
@@ -700,9 +701,9 @@
   }
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1023px) {
   .container {
-    margin-top: 0px;
+    margin-top: 120px;
     width: calc(100% - 60px);
   }
 

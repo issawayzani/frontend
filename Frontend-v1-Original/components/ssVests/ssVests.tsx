@@ -54,8 +54,8 @@ export default function ssVests() {
       <div className={classes.descriptionBox}>
         <Typography variant="h1">Vest</Typography>
         <Typography variant="body2">
-          Lock FLOW into veFLOW to earn and govern. Vote with veFLOW to earn
-          bribes and trading fees. veFLOW can be transferred, merged and split.
+          Lock BERO into hiBERO to earn and govern. Vote with hiBERO to earn
+          bribes and trading fees. hiBERO can be transferred, merged and split.
           You can hold multiple positions.
         </Typography>
       </div>
