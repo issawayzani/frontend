@@ -25,16 +25,16 @@ function Home() {
       <div className={styles.mainSection}>
 
         {/* Main Container Grid */}
-        <div className="relative mx-auto top-1/2 -translate-y-1/2 lg:w-[80vw] md:w-[50vw] sm:w-[50vw] flex flex-row justify-center lg:pt-0 sm:pt-[30em]">
+        <div className="relative mx-auto top-1/2 -translate-y-1/2 lg:w-[80vw] md:w-[50vw] sm:w-[50vw] flex flex-row justify-center lg:pt-0 sm:pt-[20em]">
           <div className="relative flex lg:flex-row md:flex-col-reverse gap-4 sm:flex-col-reverse xs:flex-col-reverse">
-            <div className="relative m-5 p-5 lg:w-[55vw] md:w-[50vw] sm:w-[]">
+            <div className="relative m-5 p-5 lg:w-[55vw] md:w-[70vw] sm:w-[40vw] xs:w-[30vw]">
               <div className="mb-3">
-                <Typography variant="h1" fontSize={'50px'} className="font-montserrat font-black uppercase">
+                <Typography variant="h1" className="font-montserrat font-black uppercase lg:text-[4em] md:text-[2.5em] sm:text-[1.5em]">
                   Honey <span className="text-beraPurple">Talks</span>
                 </Typography>
               </div>
 
-              <div className="my-[50px] py-5 lg:w-[45vw] md:w-[50vw] sm:w-[80vw] xs:w-[10vw]">
+              <div className="my-[50px] py-5 lg:w-[45vw] md:w-[75vw] sm:w-[80vw] xs:w-[10vw]">
                 <Typography variant="body1" className="font-montserrat font-medium lg:text-xl md:text-lg sm:text-lg xs:text-md mb-2">
                   Beradrome is the liquidity and low-slippage trading hub on Berachain. Beradrome combines features from the top AMM models into one power house, taking ve(3,3) to a new level.
                 </Typography>
@@ -43,28 +43,28 @@ function Home() {
                 </Typography>
               </div>
 
-              <div className="flex flex-row lg:justify-start md:justify-start sm:justify-center xs:justify-center">
-                <Button className="bg-beraPurple rounded-[5px] m-3 text-white text-[15px]" onClick={() => router.push("/swap")}>
+              <div className="flex flex-row lg:justify-start md:justify-center sm:justify-center xs:justify-center lg:w-[30rem] md:w-full sm:w-full">
+                <Button className="bg-beraPurple rounded-[5px] m-3 text-white text-[15px] hover:opacity-80 sm:w-full lg:w-[15rem]" onClick={() => router.push("/swap")}>
                   Connect Wallet
                   <EastOutlinedIcon className="ml-3" />
                 </Button>
-                <Button className="bg-beraBlue rounded-[5px] text-white m-3 text-[15px]">Learn More</Button>
+                <Button className="bg-beraBlue rounded-[5px] text-white m-3 text-[15px] hover:opacity-80 sm:w-full lg:w-[15rem]">Learn More</Button>
               </div>
 
             </div>
             <div className="relative m-5 p-5 sm:m-auto xs:m-auto">
-              <Image src={'/images/bear-riding-cycle.svg'} width={400} height={438} />
+              <img src={'/images/bear-riding-cycle.svg'} alt="bear-riding-cycle" className="w-[50vw] h-[50vh] md:w-[40vw] md:h-[43vh] sm:w-[30vw] sm:h-[30vh]" />
             </div>
           </div>
         </div>
         {/* End of Main Container Grid */}
 
         {/* Mini section */}
-        <div className="relative top-1/3 2xl:mt-[5rem] xl:mt-[3rem] lg:mt-[2rem] sm:mt-[0.5rem] w-[80vw] mx-auto">
-          <div className="flex lg:flex-row justify-center">
+        <div className="relative lg:top-1/3 2xl:my-[5rem] xl:my-[3rem] lg:my-[2rem] sm:my-[0.5rem] w-[80vw] mx-auto">
+          <div className="flex lg:flex-row md:flex-col sm:flex-col justify-center">
 
             {/* Social Media */}
-            <div className="m-2 absolute left-0">
+            <div className="m-2 relative flex flex-1 left-0 lg:justify-start justify-center">
               <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0 p-2">
                 <a href="#" className="text-white hover:text-beraPurple">
                   <svg fill="currentColor" viewBox="0 0 24 24" width={30} height={30} aria-hidden="true">
@@ -112,8 +112,8 @@ function Home() {
             {/* Social Media */}
 
             {/* scroller */}
-            <div>
-              <div className="py-auto my-auto bg-beraPurple p-4 w-[60px] h-[60px] rounded-[50%] flex justify-center">
+            <div className="flex flex-1 justify-center lg:justify-start">
+              <div className="relative flex align-middle py-auto my-auto bg-beraPurple w-[60px] h-[60px] rounded-[50%] justify-center">
                 <Button
                   onClick={() =>
                     scrollTo({ top: 900, left: 0, behavior: "smooth" })
@@ -132,70 +132,39 @@ function Home() {
       </div>
       {/* End Home Section */}
 
-      {/* Statistics */}
-      {/* <div className="relative mx-auto border border-red-600 w-[80vw] m-5">
-        <div className="relative flex flex-row justify-start border border-yellow-600 m-5 p-5">
-          <div className="flex flex-row">
-            <Typography variant="h1" className="font-medium">Trusted by &nbsp;</Typography>
-            <div className="flex flex-col">
-              <Typography variant="h1" className="font-medium">over 60k beras</Typography>
-              <div className="bg-beraPurple h-[4px]"></div>
-            </div>
-          </div>
-
-          <div className="relative border border-green-600 bg-[#181346] rounded-[10px]">
-            <div className="flex flex-row p-5 justify-between">
-              <div className="flex flex-col justify-center">
-                <Typography variant="h1">21B</Typography>
-                <Typography variant="body1" className="text-beraPurple">Total volume</Typography>
-              </div>
-              <div>
-                <Typography variant="h1">21.1M</Typography>
-                <Typography variant="body1" className="text-beraPurple">Total liquidity</Typography>
-              </div>
-              <div>
-                <Typography variant="h1">10.5M</Typography>
-                <Typography variant="body1" className="text-beraPurple">Total in Beradrome rewards</Typography>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
-      {/* End Statistics */}
-
       {/* Swap info section */}
-      <div className={styles.subSection}>
+      <div className={`${styles.subSection} lg:mt-0 sm:mt-[15em]`}>
 
         {/* Main Container Grid */}
-        <div className="relative mx-auto my-5 w-[80vw] flex flex-row justify-center">
-          <div className="relative flex flex-row gap-4">
-            <div className="relative m-5 p-5">
+        <div className="relative mx-auto my-5 lg:w-[80vw] md:w-[50vw] sm:w-[50vw] flex flex-row justify-center lg:pt-0 sm:pt-[10em]">
+          <div className="relative flex lg:flex-row md:flex-col-reverse gap-4 sm:flex-col-reverse xs:flex-col-reverse">
+            <div className="relative m-5 p-5 lg:w-[55vw] md:w-[70vw] sm:w-[40vw] xs:w-[30vw]">
               <div className="mb-3 flex flex-row">
-                <Image src={'/images/menu_Swap_icon.svg'} width={50} height={50} />
-                <Typography variant="h1" fontSize={'50px'} className="font-montserrat font-medium ml-5">
+                <img src={'/images/menu_Swap_icon.svg'} className="lg:w-[3rem] md:w-[2rem] sm:w-[1.5rem]" />
+                <Typography variant="h1" className=" ml-5 font-montserrat font-medium lg:text-[2.5em] md:text-[1.5em] sm:text-[1em]">
                   Swap your favourite tokens
                 </Typography>
               </div>
 
-              <div className="my-[50px] py-5 w-[50vw]">
-                <Typography variant="body1" className="font-montserrat font-medium text-xl">
+              <div className="my-[50px] py-5 lg:w-[45vw] md:w-[60vw] sm:w-[80vw] xs:w-[10vw]">
+                <Typography variant="body1" className="font-montserrat font-medium lg:text-xl md:text-lg sm:text-lg xs:text-md mb-2">
                   Beradrome is a decentralized exchange (DEX) on Berachain.
                 </Typography>
-                <Typography variant="body1" className="font-montserrat font-medium text-xl mt-5">
+                <Typography variant="body1" className="font-montserrat font-medium lg:text-xl md:text-lg sm:text-lg xs:text-md mb-2 mt-5">
                   Beradrome uses a variable AMM (vAMM) for uncorrelated liquidity pairs (vLP) and a stable AMM (sAMM) for highly correlated liquidity pairs (sLP). For traders, Beradrome's unique master router offers the lowest slippage possible and protects liquidity providers from asset volatility.
                 </Typography>
               </div>
 
-              <div className="flex flex-row justify-start">
-                <div className="border border-beraBlue rounded-[5px] flex justify-center p-4">
-                  <Button className="bg-beraPurple rounded-[5px] text-white text-[15px] hover:opacity-80 mr-3">Swap</Button>
-                  <Button className="bg-beraBlue rounded-[5px] text-white text-[15px] hover:opacity-80">Learn More</Button>
+              <div className="flex flex-row lg:justify-start md:justify-center sm:justify-center xs:justify-center">
+                <div className="border border-beraBlue rounded-[5px] flex justify-center p-4 lg:w-[20rem] sm:w-full">
+                  <Button className="bg-beraPurple rounded-[5px] text-white text-[15px] hover:opacity-80 sm:w-full lg:w-[10rem]">Swap</Button>
+                  <Button className="bg-beraBlue rounded-[5px] text-white ml-3 text-[15px] hover:opacity-80 lg:w-[10rem] sm:w-full">Learn More</Button>
                 </div>
               </div>
 
             </div>
-            <div className="relative m-5 p-5">
-              <Image src='/images/swap_info.svg' width={600} height={638} />
+            <div className="relative lg:m-5 lg:p-5 sm:m-auto xs:m-auto">
+              <img src='/images/swap_info.svg' className="w-[50vw] h-[30vh] md:w-full sm:w-full" />
             </div>
           </div>
         </div>
@@ -204,38 +173,38 @@ function Home() {
       {/* End Swap info section */}
 
       {/* Farm info section */}
-      <div className={styles.subSection}>
+      <div className={`${styles.subSection} lg:mt-0 sm:mt-[1rem]`}>
 
         {/* Main Container Grid */}
-        <div className="relative mx-auto my-5 w-[80vw] flex flex-row justify-center">
-          <div className="relative flex flex-row-reverse gap-4">
-            <div className="relative m-5 p-5">
+        <div className="relative mx-auto my-5 lg:w-[80vw] md:w-[50vw] sm:w-[50vw] flex flex-row justify-center lg:pt-0 sm:pt-[10em]">
+          <div className="relative flex lg:flex-row-reverse md:flex-col-reverse gap-4 sm:flex-col-reverse xs:flex-col-reverse">
+            <div className="relative m-5 p-5 lg:w-[55vw] md:w-[70vw] sm:w-[40vw] xs:w-[30vw]">
               <div className="mb-3 flex flex-row">
-                <Image src={'/images/menu_Farms_icon.svg'} width={50} height={50} />
-                <Typography variant="h1" fontSize={'50px'} className="font-montserrat font-medium ml-5">
+                <img src={'/images/menu_Farms_icon.svg'} className="lg:w-[3rem] md:w-[2rem] sm:w-[1.5rem]" />
+                <Typography variant="h1" className=" ml-5 font-montserrat font-medium lg:text-[2.5em] md:text-[1.5em] sm:text-[1em]">
                   Earn passively by farming
                 </Typography>
               </div>
 
-              <div className="my-[50px] py-5 w-[50vw]">
-                <Typography variant="body1" className="font-montserrat font-medium text-xl">
+              <div className="my-[50px] py-5 lg:w-[45vw] md:w-[60vw] sm:w-[80vw] xs:w-[10vw]">
+                <Typography variant="body1" className="font-montserrat font-medium lg:text-xl md:text-lg sm:text-lg xs:text-md mb-2">
                   Farming is the process of lending your assets to our AMM. These assets are used to build liquidity pools, allowing people to swap and trade.
                 </Typography>
-                <Typography variant="body1" className="font-montserrat font-medium text-xl mt-5">
+                <Typography variant="body1" className="font-montserrat font-medium lg:text-xl md:text-lg sm:text-lg xs:text-md mb-2 mt-5">
                   In return for providing liquidity to Beradrome, you are rewarded with BERO tokens. These can be used to invest, vote and more.
                 </Typography>
               </div>
 
-              <div className="flex flex-row justify-start">
-                <div className="border border-beraBlue rounded-[5px] flex justify-center p-4">
-                  <Button className="bg-beraPurple rounded-[5px] text-white text-[15px] hover:opacity-80 mr-3">Farm</Button>
-                  <Button className="bg-beraBlue rounded-[5px] text-white text-[15px] hover:opacity-80">Learn More</Button>
+              <div className="flex flex-row lg:justify-start md:justify-center sm:justify-center xs:justify-center">
+                <div className="border border-beraBlue rounded-[5px] flex justify-center p-4 lg:w-[20rem] sm:w-full">
+                  <Button className="bg-beraPurple rounded-[5px] text-white text-[15px] hover:opacity-80 sm:w-full lg:w-[10rem]">Farm</Button>
+                  <Button className="bg-beraBlue rounded-[5px] text-white ml-3 text-[15px] hover:opacity-80 lg:w-[10rem] sm:w-full">Learn More</Button>
                 </div>
               </div>
 
             </div>
-            <div className="relative m-5 p-5">
-              <Image src='/images/farm_info.svg' width={600} height={638} />
+            <div className="relative lg:m-5 lg:p-5 sm:m-auto xs:m-auto">
+              <img src='/images/farm_info.svg' className="w-[50vw] h-[30vh] md:w-full sm:w-full" />
             </div>
           </div>
         </div>
@@ -244,38 +213,38 @@ function Home() {
       {/* End Farm info section */}
 
       {/* Bridge info section */}
-      <div className={styles.subSection}>
+      <div className={`${styles.subSection} lg:mt-0 sm:mt-[1rem]`}>
 
         {/* Main Container Grid */}
-        <div className="relative mx-auto my-5 w-[80vw] flex flex-row justify-center">
-          <div className="relative flex flex-row gap-4">
-            <div className="relative m-5 p-5">
+        <div className="relative mx-auto my-5 lg:w-[80vw] md:w-[50vw] sm:w-[50vw] flex flex-row justify-center lg:pt-0 sm:pt-[10em]">
+          <div className="relative flex lg:flex-row md:flex-col-reverse gap-4 sm:flex-col-reverse xs:flex-col-reverse">
+            <div className="relative m-5 p-5 lg:w-[55vw] md:w-[70vw] sm:w-[40vw] xs:w-[30vw]">
               <div className="mb-3 flex flex-row">
-                <Image src={'/images/menu_Bridge_icon.svg'} width={50} height={50} />
-                <Typography variant="h1" fontSize={'50px'} className="font-montserrat font-medium ml-5">
+                <img src={'/images/menu_Bridge_icon.svg'} className="lg:w-[3rem] md:w-[2rem] sm:w-[1.5rem]" />
+                <Typography variant="h1" className=" ml-5 font-montserrat font-medium lg:text-[2.5em] md:text-[1.5em] sm:text-[1em]">
                   Bridge your tokens
                 </Typography>
               </div>
 
-              <div className="my-[50px] py-5 w-[50vw]">
-                <Typography variant="body1" className="font-montserrat font-medium text-xl">
+              <div className="my-[50px] py-5 lg:w-[45vw] md:w-[60vw] sm:w-[80vw] xs:w-[10vw]">
+                <Typography variant="body1" className="font-montserrat font-medium lg:text-xl md:text-lg sm:text-lg xs:text-md mb-2">
                   Our bridge aggregator is a first of its kind on Berachain. You can now bridge tokens over from other chains such as Ethereum, Avalanche, Terra and Arbitrum to name a few.
                 </Typography>
-                <Typography variant="body1" className="font-montserrat font-medium text-xl mt-5">
+                <Typography variant="body1" className="font-montserrat font-medium lg:text-xl md:text-lg sm:text-lg xs:text-md mb-2 mt-5">
                   By using our bridge, you have the ability to port over assets and capital from other chains to enjoy the speed and efficiency that Beradrome offers on Berachain.
                 </Typography>
               </div>
 
-              <div className="flex flex-row justify-start">
-                <div className="border border-beraBlue rounded-[5px] flex justify-center p-4">
-                  <Button className="bg-beraPurple rounded-[5px] text-white text-[15px] hover:opacity-80 mr-3">Bridge</Button>
-                  <Button className="bg-beraBlue rounded-[5px] text-white text-[15px] hover:opacity-80">Learn More</Button>
+              <div className="flex flex-row lg:justify-start md:justify-center sm:justify-center xs:justify-center">
+                <div className="border border-beraBlue rounded-[5px] flex justify-center p-4 lg:w-[20rem] sm:w-full">
+                  <Button className="bg-beraPurple rounded-[5px] text-white text-[15px] hover:opacity-80 sm:w-full lg:w-[10rem]">Bridge</Button>
+                  <Button className="bg-beraBlue rounded-[5px] text-white ml-3 text-[15px] hover:opacity-80 lg:w-[10rem] sm:w-full">Learn More</Button>
                 </div>
               </div>
 
             </div>
-            <div className="relative m-5 p-5">
-              <Image src='/images/bridge_info.svg' width={600} height={638} />
+            <div className="relative lg:m-5 lg:p-5 sm:m-auto xs:m-auto">
+              <img src='/images/bridge_info.svg' className="w-[50vw] h-[30vh] md:w-full sm:w-full" />
             </div>
           </div>
         </div>
@@ -284,38 +253,38 @@ function Home() {
       {/* End Bridge info section */}
 
       {/* lend and Borrow info section */}
-      <div className={styles.subSection}>
+      <div className={`${styles.subSection} lg:mt-0 sm:mt-[1rem]`}>
 
         {/* Main Container Grid */}
-        <div className="relative mx-auto my-5 w-[80vw] flex flex-row justify-evenly">
-          <div className="relative flex flex-row-reverse gap-4">
-            <div className="relative m-5 p-5">
+        <div className="relative mx-auto my-5 lg:w-[80vw] md:w-[50vw] sm:w-[50vw] flex flex-row justify-center lg:pt-0 sm:pt-[10em]">
+          <div className="relative flex lg:flex-row-reverse md:flex-col-reverse gap-4 sm:flex-col-reverse xs:flex-col-reverse">
+            <div className="relative m-5 p-5 lg:w-[55vw] md:w-[70vw] sm:w-[40vw] xs:w-[30vw]">
               <div className="mb-3 flex flex-row">
-                <Image src={'/images/menu_Lend_icon.svg'} width={50} height={50} />
-                <Typography variant="h1" fontSize={'50px'} className="font-montserrat font-medium ml-5">
+                <img src={'/images/menu_Lend_icon.svg'} className="lg:w-[3rem] md:w-[2rem] sm:w-[1.5rem]" />
+                <Typography variant="h1" className=" ml-5 font-montserrat font-medium lg:text-[2.5em] md:text-[1.5em] sm:text-[1em]">
                   Lend and borrow
                 </Typography>
               </div>
 
-              <div className="my-[50px] py-5 w-[50vw]">
-                <Typography variant="body1" className="font-montserrat font-medium text-xl">
+              <div className="my-[50px] py-5 lg:w-[45vw] md:w-[60vw] sm:w-[80vw] xs:w-[10vw]">
+                <Typography variant="body1" className="font-montserrat font-medium lg:text-xl md:text-lg sm:text-lg xs:text-md mb-2">
                   Ola’s lending network hosted by SpiritSwap allows for lending and borrowing directly within our DEX. This means people can leverage their trades, leverage their farms, or provide lending assets directly to the network.
                 </Typography>
-                <Typography variant="body1" className="font-montserrat font-medium text-xl mt-5">
+                <Typography variant="body1" className="font-montserrat font-medium lg:text-xl md:text-lg sm:text-lg xs:text-md mb-2 mt-5">
                   Through the implementation of our new stable AMM, the lending network is supplied directly from dormant liquidity in our stable LPs. This ensures a constant supply of assets is available to borrow and be used for lending incentives, which dramatically improves capital efficiency.
                 </Typography>
               </div>
 
-              <div className="flex flex-row justify-start">
-                <div className="border border-beraBlue rounded-[5px] flex justify-center p-4">
-                  <Button className="bg-beraPurple rounded-[5px] text-white text-[15px] hover:opacity-80 mr-3">Lend and Borrow</Button>
-                  <Button className="bg-beraBlue rounded-[5px] text-white text-[15px] hover:opacity-80">Learn More</Button>
+              <div className="flex flex-row lg:justify-start md:justify-center sm:justify-center xs:justify-center">
+                <div className="border border-beraBlue rounded-[5px] flex justify-center p-4 lg:w-[20rem] sm:w-full">
+                  <Button className="bg-beraPurple rounded-[5px] text-white text-[15px] hover:opacity-80 sm:w-full lg:w-[10rem]">Lend and Borrow</Button>
+                  <Button className="bg-beraBlue rounded-[5px] text-white ml-3 text-[15px] hover:opacity-80 lg:w-[10rem] sm:w-full">Learn More</Button>
                 </div>
               </div>
 
             </div>
-            <div className="relative m-5 p-5">
-              <Image src='/images/lend_borrow_info.svg' width={600} height={638} />
+            <div className="relative lg:m-5 lg:p-5 sm:m-auto xs:m-auto">
+              <img src='/images/lend_borrow_info.svg' className="w-[50vw] h-[30vh] md:w-full sm:w-full" />
             </div>
           </div>
         </div>
@@ -451,7 +420,7 @@ function Home() {
           <div className="lg:text-left md:text-center sm:text-center xs:text-center sm:mb-6 lg:mb-1 md:mb-0 flex">
             <span className="text-[15px] text-white "><HelpOutlineOutlinedIcon className="text-sm" /> 2022 Beradrome</span>
           </div>
-          <div className="bg-beraPurple h-[2px] lg:w-[60em] md:w-[25em] sm:w-[20em] absolute left-1/4 md:mx-5"></div>
+          <div className="bg-beraPurple h-[2px] xl:w-[60em] lg:w-[55em] md:w-[15em] sm:w-[10em] absolute left-1/4 md:mx-5"></div>
           <div className="absolute bottom-1 lg:right-[15em] md:right-[10em]">
             <span className="text-[#ADADAD]">Build 9e4746c</span>
           </div>
