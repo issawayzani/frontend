@@ -52,7 +52,7 @@ function Navigation() {
     return (
       <Box mb="20px">
         <div className={classes.navToggles}>
-          {renderSubNav(`Home`, "home")}
+          {renderSubNav("Home", "home")}
           {renderSubNav("Swap", "swap")}
           {renderSubNav("Liquidity", "addliquidity")}
           {renderSubNav("Farms", "liquidity")}
@@ -81,7 +81,7 @@ function Navigation() {
               : classes.navButton
           }
         >
-          <Image src={`/images/menu_${title}_icon.svg`} width={20} height={20} />
+          <img src={`/images/menu_${title}_icon.svg`} width={25} height={25} />
 
           <Typography variant="h2" className={classes.subtitleText}>
             {title}
