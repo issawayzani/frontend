@@ -16,13 +16,13 @@ export default function Layout({
         <link rel="icon" href="/images/logo_icon.svg" />
         <link
           rel="preload"
-          href="/fonts/Inter/Inter-Regular.ttf"
+          href="/fonts/Montserrat/Montserrat-Regular.ttf"
           as="font"
           crossOrigin=""
         />
         <link
           rel="preload"
-          href="/fonts/Inter/Inter-Bold.ttf"
+          href="/fonts/Montserrat/Montserrat-Bold.ttf"
           as="font"
           crossOrigin=""
         />
@@ -35,8 +35,6 @@ export default function Layout({
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <div className={classes.background} />
-      {/* <div className={classes.greyGlow} />
-      <div className={classes.greenGlow} /> */}
       <div className={classes.content}>
         {!configure && <Header />}
         <SnackbarController />
